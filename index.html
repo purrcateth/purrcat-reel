@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Purrcat Reel</title>
+<meta name="description" content="Shorts, shows, podcasts and the Lovebombing app by Purrcat, a creative technologist in Istanbul.">
+<link rel="canonical" href="https://purrcateth.github.io/purrcat-reel/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://purrcateth.github.io/purrcat-reel/">
+<meta property="og:title" content="Purrcat Reel">
+<meta property="og:description" content="Shorts, shows, podcasts and the Lovebombing app by Purrcat, a creative technologist in Istanbul.">
+<meta property="og:image" content="https://purrcateth.github.io/purrcat-reel/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Purrcat Reel">
+<meta name="twitter:description" content="Shorts, shows, podcasts and the Lovebombing app by Purrcat, a creative technologist in Istanbul.">
+<meta name="twitter:image" content="https://purrcateth.github.io/purrcat-reel/assets/og.jpg">
+<meta name="theme-color" content="#87CEEB">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="fonts/TAYBang.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ChiKareGo2.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; }
+[hidden] { display: none !important; }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+<style>
+/* Layout: a classic Mac desktop on the Lovebombing cloud sky. A menu bar on top, a hero window with the Purrcat wordmark beside a Get Info panel, a timeline window that maps the page, then one pinstriped window per section with work set inside like files. */
+:root {
+  --sky: #87CEEB;
+  --window: #FFD8F6;
+  --paper: #FFFFFF;
+  --ink: #000000;
+  --line: #262626;
+  --text: #262626;
+  --prose: #3A3A5E;
+  --navy: #000066;
+  --mac-silver: #C0C0C0;
+  --mac-light: #DFDFDF;
+  --mac-dark: #808080;
+  --steel: #A8C9E3;
+  --hot: #FF6B9D;
+  --aqua-ink: #1A1A4E;
+  --aqua-hi: rgba(255, 255, 255, 0.9);
+  --aqua-1: #C8DDF0;
+  --aqua-2: #A8C8E8;
+  --aqua-3: #93B8DD;
+  --aqua-4: #B0CCE8;
+  --aqua-5: #D0E2F4;
+  --shade-hard: rgba(0, 0, 0, 0.5);
+  --shade-soft: rgba(0, 0, 0, 0.25);
+  --shade-faint: rgba(0, 0, 0, 0.15);
+
+  --font-wordmark: "TAYBang", "Apple Garamond Light", Georgia, serif;
+  --font-prose: "TAYSundae", "Apple Garamond Light", Garamond, Georgia, serif;
+  --font-serif: "Apple Garamond Light", Garamond, Georgia, "Times New Roman", serif;
+  --font-chrome: "ChiKareGo2", "VT323", Geneva, Monaco, monospace;
+  --font-pixel: "VT323", Geneva, Monaco, monospace;
+  --font-aqua: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+
+  --heart: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 6' shape-rendering='crispEdges'%3E%3Cpath fill='%23FF6B9D' d='M1 0h2v1h1V0h2v1h1v2H6v1H5v1H4v1H3V5H2V4H1V3H0V1h1z'/%3E%3C/svg%3E");
+  --arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 7' shape-rendering='crispEdges'%3E%3Cg fill='%23000'%3E%3Crect x='2' y='0' width='5' height='1'/%3E%3Crect x='6' y='0' width='1' height='5'/%3E%3Crect x='5' y='1' width='1' height='1'/%3E%3Crect x='4' y='2' width='1' height='1'/%3E%3Crect x='3' y='3' width='1' height='1'/%3E%3Crect x='2' y='4' width='1' height='1'/%3E%3Crect x='1' y='5' width='1' height='1'/%3E%3Crect x='0' y='6' width='1' height='1'/%3E%3C/g%3E%3C/svg%3E");
+  color-scheme: light;
+}
+
+@font-face { font-family: "TAYBang"; src: url("fonts/TAYBang.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "TAYSundae"; src: url("fonts/TAYSundae.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "ChiKareGo2"; src: url("fonts/ChiKareGo2.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Apple Garamond Light"; src: url("fonts/AppleGaramond.woff2") format("woff2"); font-weight: 300; font-display: swap; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 48px; }
+body {
+  background: var(--sky);
+  color: var(--text);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  z-index: 30;
+  background: var(--paper);
+}
+.sky {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: var(--sky) url("assets/clouds.webp") center / cover no-repeat;
+}
+a { color: inherit; }
+a, button {
+  cursor: url("assets/cursor-1x.png") 9 1, pointer;
+  cursor: -webkit-image-set(url("assets/cursor-1x.png") 1x, url("assets/cursor-2x.png") 2x) 9 1, pointer;
+  cursor: image-set(url("assets/cursor-1x.png") 1x, url("assets/cursor-2x.png") 2x) 9 1, pointer;
+}
+:focus-visible { outline: 2px dotted var(--ink); outline-offset: 2px; }
+h1, h2, h3 { font-weight: normal; }
+img { max-width: 100%; }
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: max(clamp(16px, 4vw, 40px), env(safe-area-inset-left, 0px));
+  padding-right: max(clamp(16px, 4vw, 40px), env(safe-area-inset-right, 0px));
+}
+
+/* Menu bar */
+.menubar {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 20;
+  background: var(--paper);
+  border-bottom: 1px solid var(--ink);
+}
+.menubar-in {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 32px;
+  font-family: var(--font-chrome);
+  font-size: 15px;
+  color: var(--ink);
+}
+.menubar a { text-decoration: none; padding: 4px 8px; white-space: nowrap; line-height: 1; }
+.menubar a:hover { background: var(--ink); color: var(--paper); }
+.mb-logo { display: flex; align-items: center; padding: 3px 6px !important; }
+.mb-logo img { display: block; width: 20px; height: 20px; }
+.mb-items { display: flex; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.mb-items::-webkit-scrollbar { display: none; }
+.mb-clock {
+  margin-left: auto;
+  display: flex;
+  gap: 14px;
+  padding-left: 10px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 760px) { .mb-clock { display: none; } }
+@media (max-width: 480px) { .mb-hide-sm { display: none; } .menubar a { padding: 4px 6px; } }
+
+/* Windows, from the Lovebombing app */
+.win {
+  position: relative;
+  min-width: 0;
+  background: var(--window);
+  border: 2px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--shade-hard);
+}
+.tbar {
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr) 12px;
+  align-items: center;
+  gap: 8px;
+  height: 24px;
+  padding: 0 8px;
+  background: repeating-linear-gradient(0deg, var(--paper) 0 1px, var(--window) 1px 2px);
+  border-bottom: 2px solid var(--ink);
+  user-select: none;
+}
+.tbar span {
+  justify-self: center;
+  max-width: 100%;
+  padding: 0 8px;
+  background: var(--window);
+  font-family: var(--font-chrome);
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.box { display: block; width: 12px; height: 12px; border: 1px solid var(--ink); background: var(--window); }
+.box.ghost { visibility: hidden; }
+.sbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  min-height: 24px;
+  padding: 2px 8px;
+  border-top: 1px solid var(--ink);
+  font-family: var(--font-pixel);
+  font-size: 17px;
+  line-height: 1.1;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Buttons and fields */
+.mbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 12px;
+  font-family: var(--font-pixel);
+  font-size: 19px;
+  line-height: 1.3;
+  color: var(--ink);
+  background: var(--window);
+  border: 2px outset var(--mac-light);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.mbtn:hover { background: var(--paper); }
+.mbtn:active { background: var(--ink); color: var(--paper); border-style: inset; }
+.ext {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: currentColor;
+  -webkit-mask: var(--arrow) center / contain no-repeat;
+  mask: var(--arrow) center / contain no-repeat;
+}
+.aqua {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 30px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(180deg, var(--aqua-hi) 0%, var(--aqua-1) 25%, var(--aqua-2) 50%, var(--aqua-3) 65%, var(--aqua-4) 85%, var(--aqua-5) 100%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.8), inset 0 -1px 1px rgba(100, 140, 180, 0.3);
+  font-family: var(--font-aqua);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--aqua-ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.aqua:active {
+  background: linear-gradient(180deg, var(--aqua-4) 0%, var(--aqua-3) 30%, var(--aqua-2) 50%, var(--aqua-1) 80%, rgba(255, 255, 255, 0.7) 100%);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(100, 140, 180, 0.3);
+}
+.fieldrow { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 10px; }
+.flabel { font-family: var(--font-chrome); font-size: 18px; color: var(--line); white-space: nowrap; }
+.field {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  max-width: 100%;
+  padding: 3px 10px;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  font-family: var(--font-pixel);
+  font-size: 21px;
+  line-height: 1.15;
+  color: var(--ink);
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.caret { display: inline-block; width: 1px; height: 20px; margin-left: 3px; background: var(--ink); animation: blink 1.1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Hero */
+.hero { padding-block: clamp(30px, 5vw, 60px) 0; }
+.hero-grid { display: grid; gap: 28px; align-items: start; }
+@media (min-width: 900px) {
+  .hero-grid { grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 32px; }
+  .win-info { margin-top: 76px; }
+}
+.hero-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: clamp(44px, 6vw, 60px) clamp(18px, 5vw, 48px) clamp(28px, 4vw, 42px);
+  text-align: center;
+}
+.sticker {
+  position: absolute;
+  top: -48px;
+  right: 12px;
+  width: clamp(84px, 13vw, 142px);
+  height: auto;
+  transform: rotate(9deg);
+  filter: drop-shadow(2px 4px 0 var(--shade-soft));
+  pointer-events: none;
+}
+.wordmark {
+  margin: 0;
+  font-family: var(--font-wordmark);
+  font-size: clamp(64px, 11vw, 112px);
+  line-height: 1;
+  color: var(--navy);
+  text-shadow: -3.5px 6px 12px var(--shade-soft), 0 4.5px 4.5px var(--shade-soft);
+}
+.who { margin: -2px 0 0; font-family: var(--font-chrome); font-size: 15px; color: var(--line); }
+.headline {
+  margin: 6px 0 0;
+  max-width: 20ch;
+  font-family: var(--font-serif);
+  font-size: clamp(29px, 3.9vw, 43px);
+  line-height: 1.1;
+  color: var(--navy);
+  text-wrap: balance;
+  text-shadow: -2px 3px 6px var(--shade-faint);
+}
+.lede { margin: 0; max-width: 50ch; font-family: var(--font-prose); font-size: 17px; line-height: 1.75; color: var(--prose); }
+.actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 4px; }
+
+.info-body { display: grid; gap: 14px; padding: 22px 20px 18px; }
+.info-h {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 29px;
+  line-height: 1.1;
+  color: var(--navy);
+  text-align: center;
+  text-shadow: -2px 3px 6px var(--shade-faint);
+}
+.info { margin: 0; display: grid; gap: 8px; }
+.info > div { display: grid; grid-template-columns: 7.6em minmax(0, 1fr); gap: 10px; align-items: baseline; }
+.info dt { font-family: var(--font-chrome); font-size: 15px; color: var(--line); text-align: right; }
+.info dd { margin: 0; font-family: var(--font-pixel); font-size: 21px; line-height: 1.15; color: var(--ink); overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.info-note { margin: 0; padding: 10px 12px; background: var(--paper); border: 1px solid var(--ink); font-size: 17px; line-height: 1.45; }
+
+/* Timeline */
+.win-tl { margin-top: 32px; }
+.tl {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  grid-template-rows: 34px repeat(4, 36px);
+  background: var(--paper);
+}
+.lab {
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-chrome);
+  font-size: 14px;
+  background: var(--mac-light);
+  border-right: 1px solid var(--ink);
+  border-top: 1px solid var(--mac-dark);
+}
+.lab-ruler { border-top: 0; }
+.ruler {
+  grid-column: 2;
+  grid-row: 1;
+  position: relative;
+  background-color: var(--paper);
+  background-image:
+    repeating-linear-gradient(to right, var(--ink) 0 1px, transparent 1px calc(100% / 6)),
+    repeating-linear-gradient(to right, var(--mac-dark) 0 1px, transparent 1px calc(100% / 12));
+  background-size: 100% 10px, 100% 5px;
+  background-position: 0 100%, 0 100%;
+  background-repeat: no-repeat;
+}
+.tick {
+  position: absolute;
+  top: 2px;
+  left: calc(var(--x) * 1%);
+  transform: translateX(-50%);
+  font-family: var(--font-pixel);
+  font-size: 15px;
+  line-height: 1;
+  color: var(--line);
+  white-space: nowrap;
+}
+.tick.first { transform: none; left: 4px; }
+.tick.last { transform: translateX(-100%); left: calc(100% - 4px); }
+@media (max-width: 560px) { .tick.minor { display: none; } }
+.mark {
+  position: absolute;
+  top: 12px;
+  left: calc(var(--x) * 1%);
+  width: 14px;
+  height: 12px;
+  transform: translateX(-50%);
+  background: var(--heart) center / contain no-repeat;
+}
+.lane { grid-column: 2; position: relative; border-top: 1px solid var(--mac-dark); }
+.clip {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: calc(var(--s) * 1%);
+  width: calc((var(--e) - var(--s)) * 1%);
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  overflow: hidden;
+  background: var(--tc);
+  border: 1px solid var(--ink);
+  font-family: var(--font-pixel);
+  font-size: 18px;
+  line-height: 1;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.clip:hover { box-shadow: inset 0 0 0 1px var(--ink); }
+.clip.on { background: var(--ink); color: var(--paper); }
+.overlay { grid-column: 2; grid-row: 1 / -1; position: relative; z-index: 3; pointer-events: none; }
+.playhead { position: absolute; top: 0; bottom: 0; left: 0; width: 2px; margin-left: -1px; background: var(--hot); }
+.playhead::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -5px;
+  width: 12px;
+  height: 10px;
+  background: var(--hot);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+/* Section windows */
+.sec { margin-top: clamp(36px, 6vw, 56px); }
+.sec-body { padding: clamp(22px, 4vw, 34px) clamp(16px, 4vw, 34px) clamp(22px, 4vw, 34px); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 24px; }
+.sec h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4.6vw, 48px);
+  line-height: 1.04;
+  color: var(--navy);
+  text-wrap: balance;
+  text-shadow: -2px 3px 6px var(--shade-faint);
+}
+.sec-intro { margin: 0; max-width: 60ch; font-family: var(--font-prose); font-size: 17px; line-height: 1.75; color: var(--prose); }
+
+.grid { display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 760px) { .grid.c2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--shade-soft);
+}
+.strip { position: relative; height: 86px; background: var(--paper); border-bottom: 1px solid var(--ink); }
+.strip canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; }
+.handle {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  max-width: calc(100% - 16px);
+  padding: 1px 6px 2px;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  font-family: var(--font-pixel);
+  font-size: 18px;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+.card-body { display: flex; flex-direction: column; gap: 8px; flex: 1; padding: 14px 16px 16px; }
+.card h3 { margin: 0; font-family: var(--font-serif); font-size: 25px; line-height: 1.15; color: var(--navy); text-wrap: balance; }
+.role { margin: 0; font-family: var(--font-chrome); font-size: 14px; color: var(--line); }
+.desc { margin: 0; font-size: 17px; line-height: 1.5; }
+.links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 8px; }
+
+/* Lovebombing pair */
+.pair { display: grid; gap: clamp(36px, 6vw, 56px); align-items: start; margin-top: clamp(36px, 6vw, 56px); }
+.pair > .sec { margin-top: 0; }
+@media (min-width: 920px) {
+  .pair { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; }
+  .pair > .win-app { margin-top: 64px; }
+}
+.history, .steps { list-style: none; margin: 0; padding: 0; }
+.history li, .steps li {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 10px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+.history li:last-child, .steps li:last-child { border-bottom: 1px solid var(--line); }
+.hrt { display: block; width: 16px; height: 14px; margin-top: 5px; background: var(--heart) center / contain no-repeat; }
+.n { font-family: var(--font-pixel); font-size: 20px; line-height: 1.2; color: var(--navy); display: flex; gap: 4px; align-items: flex-start; }
+.n .hrt { width: 12px; height: 10px; margin-top: 4px; }
+.history strong, .steps strong { display: block; font-family: var(--font-chrome); font-weight: normal; font-size: 16px; color: var(--ink); }
+.history p, .steps p { margin: 3px 0 0; font-size: 17px; line-height: 1.5; }
+.after { margin-top: 18px; }
+
+.win-app .app-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: clamp(28px, 5vw, 40px) clamp(16px, 4vw, 30px) 28px;
+  text-align: center;
+}
+.app-word {
+  margin: 0;
+  font-family: var(--font-wordmark);
+  font-size: clamp(46px, 6.4vw, 64px);
+  line-height: 1;
+  color: var(--navy);
+  text-shadow: -3.5px 6px 12px var(--shade-soft), 0 4.5px 4.5px var(--shade-soft);
+}
+.app-blurb { margin: 0; max-width: 44ch; font-family: var(--font-prose); font-size: 16px; line-height: 1.75; color: var(--prose); }
+.spec { margin: 0; width: 100%; display: grid; gap: 8px; padding: 12px 14px; text-align: left; background: var(--paper); border: 1px solid var(--ink); }
+.spec > div { display: grid; grid-template-columns: 6.4em minmax(0, 1fr); gap: 10px; align-items: baseline; }
+.spec dt { font-family: var(--font-chrome); font-size: 14px; color: var(--line); }
+.spec dd { margin: 0; font-size: 16px; line-height: 1.45; }
+.take { display: inline-block; border-radius: 40px; line-height: 0; }
+.take img { display: block; width: auto; height: 66px; max-width: 100%; }
+.take:active img { transform: translateY(1px); }
+
+/* Method */
+.method { display: grid; gap: 28px; }
+@media (min-width: 880px) { .method { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 48px; } }
+.method-intro { display: grid; gap: 16px; align-content: start; }
+.kit { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  padding: 3px 8px 4px;
+  font-family: var(--font-pixel);
+  font-size: 18px;
+  line-height: 1;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+
+/* Off the timeline */
+.off { display: grid; gap: 18px; }
+@media (min-width: 760px) { .off { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.off > div { display: grid; gap: 8px; align-content: start; min-width: 0; padding: 16px; background: var(--paper); border: 1px solid var(--ink); box-shadow: 2px 2px 0 var(--shade-soft); }
+.off h3 { margin: 0; font-family: var(--font-serif); font-size: 24px; line-height: 1.15; color: var(--navy); }
+.off .links { margin-top: 2px; padding-top: 0; }
+.also { margin: 20px 0 0; font-size: 17px; line-height: 1.5; max-width: 70ch; }
+
+/* Contact */
+.contact-body { display: flex; flex-direction: column; align-items: center; gap: 16px; padding-block: clamp(34px, 6vw, 60px); text-align: center; }
+.contact-body h2 { font-size: clamp(36px, 6vw, 62px); max-width: 15ch; }
+.contact-body > p { margin: 0; }
+.signoff { display: flex; flex-direction: column; align-items: center; gap: 2px; margin-top: 8px; font-family: var(--font-chrome); font-size: 15px; }
+.sig { font-family: var(--font-wordmark); font-size: 44px; line-height: 1.1; color: var(--navy); text-shadow: -2px 4px 8px var(--shade-soft); }
+
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 16px; padding-block: 32px 40px; font-family: var(--font-chrome); font-size: 14px; }
+.foot span, .foot a { padding: 3px 8px; background: var(--paper); border: 1px solid var(--ink); text-decoration: none; }
+
+/* Windows settle in, already visible */
+@keyframes settle { from { transform: translateY(14px); } to { transform: none; } }
+.win { animation: settle 0.5s ease-out both; }
+.hero-grid > .win:nth-child(2) { animation-delay: 0.08s; }
+.win-tl { animation-delay: 0.14s; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .win { animation: none; }
+  .caret { animation: none; }
+}
+</style>
+</head>
+<body>
+<div class="sky" aria-hidden="true"></div>
+
+<header class="menubar">
+  <nav class="menubar-in wrap" aria-label="Sections">
+    <a class="mb-logo" href="#top" aria-label="Back to top"><img src="assets/flower.webp" alt="" width="520" height="512"></a>
+    <div class="mb-items">
+      <a class="mb-hide-sm" href="#top">Purrcat</a>
+      <a href="#shorts">Shorts</a>
+      <a href="#shows">Shows</a>
+      <a href="#lovebombing">Lovebombing</a>
+      <a class="mb-hide-sm" href="#method">Method</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="mb-clock" aria-label="Time in San Francisco and Istanbul">
+      <span>SF <span id="mb-sf">--:--</span></span>
+      <span>IST <span id="mb-ist">--:--</span></span>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="hero wrap">
+    <div class="hero-grid">
+      <section class="win win-hero" aria-labelledby="h-top">
+        <div class="tbar" aria-hidden="true"><i class="box"></i><span>Purrcat Reel</span><i class="box ghost"></i></div>
+        <div class="hero-body">
+          <img class="sticker" src="assets/flower.webp" alt="" width="520" height="512">
+          <h1 class="wordmark" id="h-top">Purrcat</h1>
+          <p class="who">Lara / creative technologist / Istanbul</p>
+          <p class="headline">I host the stream, run the board, and cut the clips.</p>
+          <p class="lede">I’ve spent the last few years making live shows, two podcasts and X Spaces for internet-native communities, mostly in crypto. Now I’m all in on AI. Everything here shows how I find a moment and get it onto the timeline.</p>
+          <div class="fieldrow">
+            <span class="flabel">Applying for:</span>
+            <span class="field">Short-form clip editor at MTS<i class="caret" aria-hidden="true"></i></span>
+          </div>
+          <div class="actions">
+            <a class="aqua" href="#shorts">Watch the shorts</a>
+            <a class="mbtn" href="#contact">Get in touch</a>
+          </div>
+        </div>
+      </section>
+
+      <aside class="win win-info" aria-labelledby="h-info">
+        <div class="tbar" aria-hidden="true"><i class="box"></i><span>MTS Info</span><i class="box ghost"></i></div>
+        <div class="info-body">
+          <h2 class="info-h" id="h-info">Applying to MTS</h2>
+          <dl class="info">
+            <div><dt>Feeds:</dt><dd>X, Reels, IG</dd></div>
+            <div><dt>Where:</dt><dd>Remote, from Istanbul</dd></div>
+            <div><dt>SF now:</dt><dd id="t-sf">--:--</dd></div>
+            <div><dt>Istanbul now:</dt><dd id="t-ist">--:--</dd></div>
+            <div><dt>On air:</dt><dd>09:00 PT, <span id="air-ist">19:00</span> here</dd></div>
+          </dl>
+          <p class="info-note">My evening overlaps your morning on air, so I can cut while you stream.</p>
+        </div>
+        <div class="sbar"><span>Live weekdays at 09:00 PT</span></div>
+      </aside>
+    </div>
+
+    <section class="win win-tl" aria-labelledby="h-tl">
+      <div class="tbar" aria-hidden="true"><i class="box"></i><span id="h-tl">Timeline</span><i class="box ghost"></i></div>
+      <nav class="tl" aria-label="Sections of this page, laid out as an edit timeline">
+        <div class="lab lab-ruler" style="grid-row:1" aria-hidden="true"></div>
+        <div class="ruler">
+          <span class="tick first" style="--x:0" aria-hidden="true">00:00</span>
+          <span class="tick minor" style="--x:16.6667" aria-hidden="true">00:10</span>
+          <span class="tick" style="--x:33.3333" aria-hidden="true">00:20</span>
+          <span class="tick minor" style="--x:50" aria-hidden="true">00:30</span>
+          <span class="tick" style="--x:66.6667" aria-hidden="true">00:40</span>
+          <span class="tick minor" style="--x:83.3333" aria-hidden="true">00:50</span>
+          <span class="tick last" style="--x:100" aria-hidden="true">01:00</span>
+          <a class="mark" href="#method" style="--x:20" aria-label="Moment marker: how I'd cut MTS"></a>
+          <a class="mark" href="#method" style="--x:62" aria-label="Moment marker: how I'd cut MTS"></a>
+          <a class="mark" href="#method" style="--x:76" aria-label="Moment marker: how I'd cut MTS"></a>
+        </div>
+
+        <div class="lab" style="grid-row:2">V2</div>
+        <div class="lane" style="grid-row:2">
+          <a class="clip" href="#shorts" style="--s:6;--e:34;--tc:var(--hot)" data-s="6" data-e="34">Shorts</a>
+          <a class="clip" href="#lovebombing" style="--s:54;--e:72;--tc:var(--window)" data-s="54" data-e="72">App</a>
+        </div>
+        <div class="lab" style="grid-row:3">V1</div>
+        <div class="lane" style="grid-row:3">
+          <a class="clip" href="#shows" style="--s:30;--e:52;--tc:var(--steel)" data-s="30" data-e="52">Shows</a>
+          <a class="clip" href="#offline" style="--s:80;--e:100;--tc:var(--mac-silver)" data-s="80" data-e="100">IRL</a>
+        </div>
+        <div class="lab" style="grid-row:4">A1</div>
+        <div class="lane" style="grid-row:4">
+          <a class="clip" href="#shows" style="--s:32;--e:54;--tc:var(--sky)" data-s="32" data-e="54">Podcasts</a>
+        </div>
+        <div class="lab" style="grid-row:5">A2</div>
+        <div class="lane" style="grid-row:5">
+          <a class="clip" href="#lovebombing" style="--s:50;--e:70;--tc:var(--window)" data-s="50" data-e="70">Spaces</a>
+        </div>
+
+        <div class="overlay" aria-hidden="true"><div class="playhead" id="playhead"></div></div>
+      </nav>
+      <div class="sbar"><span>This page, as an edit</span><span id="readout" aria-hidden="true">00:00:00:00</span></div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <section class="win sec" id="shorts" aria-labelledby="h-shorts">
+      <div class="tbar" aria-hidden="true"><i class="box"></i><span>Shorts</span><i class="box ghost"></i></div>
+      <div class="sec-body">
+        <header class="sec-head">
+          <h2 id="h-shorts">Shorts I cut and posted</h2>
+          <p class="sec-intro">Each feed has shorts I picked, edited and posted, with my own copy on every post.</p>
+        </header>
+        <div class="grid c2">
+          <article class="card" style="--tc: var(--hot)">
+            <div class="strip"><canvas class="film" data-seed="lovebombing-shorts" aria-hidden="true"></canvas><span class="handle">@LovebombingINC</span></div>
+            <div class="card-body">
+              <h3>Lovebombing INC</h3>
+              <p class="role">Clipper, editor, copy</p>
+              <p class="desc">Moments from my livestream interviews and X Spaces, cut for X and posted with the context that makes each one land.</p>
+              <div class="links"><a class="mbtn" href="https://x.com/LovebombingINC" target="_blank" rel="noopener">See the shorts on X <i class="ext" aria-hidden="true"></i></a></div>
+            </div>
+          </article>
+          <article class="card" style="--tc: var(--hot)">
+            <div class="strip"><canvas class="film" data-seed="internet-explorers" aria-hidden="true"></canvas><span class="handle">@intrntexplorers</span></div>
+            <div class="card-body">
+              <h3>Internet Explorers by Seed Club</h3>
+              <p class="role">Producer, clipper, copy</p>
+              <p class="desc">Clips from Seed Club’s livestream series, which I produced and which later became 11AM. I picked the moments, edited them and wrote the posts.</p>
+              <div class="links"><a class="mbtn" href="https://x.com/intrntexplorers" target="_blank" rel="noopener">See the shorts on X <i class="ext" aria-hidden="true"></i></a></div>
+            </div>
+          </article>
+          <article class="card" style="--tc: var(--hot)">
+            <div class="strip"><canvas class="film" data-seed="fluent-shorts" aria-hidden="true"></canvas><span class="handle">@fluent_eco</span></div>
+            <div class="card-body">
+              <h3>Fluent</h3>
+              <p class="role">Clipper, editor, copy</p>
+              <p class="desc">Shorts from Fluent streams and community sessions, made while I led ecosystem and creative partnerships there.</p>
+              <div class="links"><a class="mbtn" href="https://x.com/fluent_eco" target="_blank" rel="noopener">See the shorts on X <i class="ext" aria-hidden="true"></i></a></div>
+            </div>
+          </article>
+          <article class="card" style="--tc: var(--hot)">
+            <div class="strip"><canvas class="film" data-seed="instagram-reels" aria-hidden="true"></canvas><span class="handle">@larapurrcat</span></div>
+            <div class="card-body">
+              <h3>Instagram reels</h3>
+              <p class="role">Creator, editor</p>
+              <p class="desc">My own reels and visual experiments, edited in CapCut.</p>
+              <div class="links"><a class="mbtn" href="https://www.instagram.com/larapurrcat/" target="_blank" rel="noopener">See the reels <i class="ext" aria-hidden="true"></i></a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="sbar"><span>4 items</span><span>Track V2</span></div>
+    </section>
+
+    <section class="win sec" id="shows" aria-labelledby="h-shows">
+      <div class="tbar" aria-hidden="true"><i class="box"></i><span>Shows</span><i class="box ghost"></i></div>
+      <div class="sec-body">
+        <header class="sec-head">
+          <h2 id="h-shows">Shows and podcasts I host</h2>
+          <p class="sec-intro">Long-form I host, write and produce. This is where the clips come from.</p>
+        </header>
+        <div class="grid c2">
+          <article class="card" style="--tc: var(--steel)">
+            <div class="strip"><canvas class="film" data-seed="little-big-market" aria-hidden="true"></canvas><span class="handle">Interviews, 4 episodes</span></div>
+            <div class="card-body">
+              <h3>Little Big Market</h3>
+              <p class="role">Host, producer</p>
+              <p class="desc">An interview show about trust, community and brand building in crypto. Guests so far include Keewy founder Marianne, artist Grizz, Jessy Fries and Regan.</p>
+              <div class="links">
+                <a class="mbtn" href="https://open.spotify.com/show/1JHrky0schKJAeYH54oHgu" target="_blank" rel="noopener">Spotify <i class="ext" aria-hidden="true"></i></a>
+                <a class="mbtn" href="https://podcasts.apple.com/tr/podcast/little-big-market/id1884743011" target="_blank" rel="noopener">Apple Podcasts <i class="ext" aria-hidden="true"></i></a>
+                <a class="mbtn" href="https://www.youtube.com/@PurrcatLara/videos" target="_blank" rel="noopener">YouTube <i class="ext" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+          <article class="card" style="--tc: var(--steel)">
+            <div class="strip"><canvas class="film" data-seed="the-overflow" aria-hidden="true"></canvas><span class="handle">Solo, 4 episodes</span></div>
+            <div class="card-body">
+              <h3>The Overflow by Purrcat</h3>
+              <p class="role">Host, writer, editor</p>
+              <p class="desc">My solo video podcast about building, creating and trusting yourself, out whenever the cup overflows. The latest episode asks what work looks like once AI does most of the doing.</p>
+              <div class="links">
+                <a class="mbtn" href="https://open.spotify.com/show/6qE1unGS9MERSP3Iz1I9v0" target="_blank" rel="noopener">Spotify <i class="ext" aria-hidden="true"></i></a>
+                <a class="mbtn" href="https://podcasts.apple.com/tr/podcast/the-overflow-by-purrcat/id1882866590" target="_blank" rel="noopener">Apple Podcasts <i class="ext" aria-hidden="true"></i></a>
+                <a class="mbtn" href="https://www.youtube.com/@PurrcatLara/videos" target="_blank" rel="noopener">YouTube <i class="ext" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="sbar"><span>2 shows, 8 episodes</span><span>Tracks V1, A1</span></div>
+    </section>
+
+    <div class="pair" id="lovebombing">
+      <section class="win sec" aria-labelledby="h-lb">
+        <div class="tbar" aria-hidden="true"><i class="box"></i><span>Lovebombing INC</span><i class="box ghost"></i></div>
+        <div class="sec-body">
+          <header class="sec-head">
+            <h2 id="h-lb">A community, a show and an app</h2>
+            <p class="sec-intro">I built Lovebombing INC from a small group chat into a community across Discord, Telegram, X Spaces, livestreams and IRL events, and kept it active until May 2026.</p>
+          </header>
+          <ol class="history">
+            <li><i class="hrt" aria-hidden="true"></i><div><strong>The group chat</strong><p>It started small and grew from the ground up, with light moderation and a lot of trust.</p></div></li>
+            <li><i class="hrt" aria-hidden="true"></i><div><strong>X Spaces</strong><p>While I was working at Fluent, I started hosting X Spaces on markets, culture and community, plus full moon and equinox ritual Spaces.</p></div></li>
+            <li><i class="hrt" aria-hidden="true"></i><div><strong>The show</strong><p>The Spaces grew into a weekly livestream interview show, simulcast to X, YouTube, Twitch and Instagram. I kept both going after I left Fluent, until April 2026.</p></div></li>
+            <li><i class="hrt" aria-hidden="true"></i><div><strong>The app</strong><p>Then I started building Lovebombing, an app for handmade digital love notes.</p></div></li>
+          </ol>
+          <div class="links after"><a class="mbtn" href="https://x.com/LovebombingINC" target="_blank" rel="noopener">Lovebombing on X <i class="ext" aria-hidden="true"></i></a></div>
+        </div>
+        <div class="sbar"><span>Community active until May 2026</span><span>Track A2</span></div>
+      </section>
+
+      <section class="win win-app" aria-labelledby="h-app">
+        <div class="tbar" aria-hidden="true"><i class="box"></i><span>Lovebombing</span><i class="box ghost"></i></div>
+        <div class="app-body">
+          <h2 class="app-word" id="h-app">Lovebombing</h2>
+          <p class="app-blurb">Handmade digital love notes, in the lineage of Ray Johnson’s mail art. You pick a frame, collage images, clips and stickers, and build a beat on a small sequencer. The making is recorded as a timelapse. Each receiver adds a layer and sends it on. The chain is the work.</p>
+          <dl class="spec">
+            <div><dt>Built with:</dt><dd>Next.js, Fabric.js, ffmpeg in the browser, Supabase</dd></div>
+            <div><dt>Made with:</dt><dd>Claude Code and Figma</dd></div>
+            <div><dt>Also:</dt><dd>An on-chain edition on Stellar, with tips and Folded Letter, an encrypted exquisite-corpse drawing game.</dd></div>
+          </dl>
+          <a class="take" href="https://lovebombing.vercel.app/" target="_blank" rel="noopener"><img src="assets/take-me-there.webp" alt="Take me there: open the Lovebombing app" width="640" height="206"></a>
+          <a class="mbtn" href="https://github.com/purrcateth" target="_blank" rel="noopener">Code on GitHub <i class="ext" aria-hidden="true"></i></a>
+        </div>
+        <div class="sbar"><span>lovebombing.vercel.app</span><span>v1 live</span></div>
+      </section>
+    </div>
+
+    <section class="win sec" id="method" aria-labelledby="h-method">
+      <div class="tbar" aria-hidden="true"><i class="box"></i><span>Markers</span><i class="box ghost"></i></div>
+      <div class="sec-body">
+        <div class="method">
+          <div class="method-intro">
+            <h2 id="h-method">How I’d cut MTS</h2>
+            <p class="sec-intro">A daily show makes hours of great talk. The job is finding the forty seconds people will quote, and getting them out while the topic is still moving.</p>
+            <div class="kit" aria-label="Tools I use">
+              <span class="chip">OBS</span><span class="chip">Restream</span><span class="chip">CapCut</span><span class="chip">Descript</span><span class="chip">Canva</span><span class="chip">Adobe Firefly</span><span class="chip">Figma</span><span class="chip">Claude Code</span><span class="chip">Sony ZV-E10</span><span class="chip">DJI Osmo Pocket 3</span><span class="chip">Elgato Cam Link 4K</span>
+            </div>
+          </div>
+          <ol class="steps">
+            <li><div class="n"><i class="hrt" aria-hidden="true"></i>1</div><div><strong>Watch it live</strong><p>I mark moments as they happen: a sharp claim, a laugh, a take people will argue about.</p></div></li>
+            <li><div class="n"><i class="hrt" aria-hidden="true"></i>2</div><div><strong>Start on the idea</strong><p>The clip opens on the sentence that carries it, with no warm-up in front.</p></div></li>
+            <li><div class="n"><i class="hrt" aria-hidden="true"></i>3</div><div><strong>Caption it like a post</strong><p>On-screen words sound like a person on the timeline, so the clip works with the sound off.</p></div></li>
+            <li><div class="n"><i class="hrt" aria-hidden="true"></i>4</div><div><strong>Cut for each feed</strong><p>16:9 or square with burned-in captions for X, and 9:16 for Reels and IG.</p></div></li>
+            <li><div class="n"><i class="hrt" aria-hidden="true"></i>5</div><div><strong>Ship while it’s hot</strong><p>A daily show runs on the timeline’s clock, so speed is part of the edit.</p></div></li>
+          </ol>
+        </div>
+      </div>
+      <div class="sbar"><span>5 markers</span><span>Ruler</span></div>
+    </section>
+
+    <section class="win sec" id="offline" aria-labelledby="h-off">
+      <div class="tbar" aria-hidden="true"><i class="box"></i><span>IRL</span><i class="box ghost"></i></div>
+      <div class="sec-body">
+        <header class="sec-head"><h2 id="h-off">Off the timeline</h2></header>
+        <div class="off">
+          <div>
+            <p class="role">IRL</p>
+            <h3>Conference side events</h3>
+            <p class="desc">Sponsorships and side events at Token2049, Devcon, Devconnect, Consensus, EthCC, ETH Denver and Solana Breakpoint since 2022, including a prediction markets workshop in Argentina before Devconnect.</p>
+          </div>
+          <div>
+            <p class="role">Writing</p>
+            <h3>Essays on Substack</h3>
+            <p class="desc">Longer pieces about work, culture and life between chapters.</p>
+            <div class="links"><a class="mbtn" href="https://substack.com/@purrcat" target="_blank" rel="noopener">Substack <i class="ext" aria-hidden="true"></i></a></div>
+          </div>
+        </div>
+        <p class="also">Also: a beginner trading video series I made as Purrcat for Sai, a perpetual trading platform, and video edits, animations and social kits for Dora.</p>
+      </div>
+      <div class="sbar"><span>Since 2022</span><span>Track V1</span></div>
+    </section>
+
+    <section class="win sec" id="contact" aria-labelledby="h-contact">
+      <div class="tbar" aria-hidden="true"><i class="box"></i><span>Contact</span><i class="box ghost"></i></div>
+      <div class="sec-body contact-body">
+        <h2 id="h-contact">Send me an episode. I’ll send back clips.</h2>
+        <p class="sec-intro">DMs on X are fastest. Email works too.</p>
+        <div class="fieldrow">
+          <span class="flabel">Email:</span>
+          <span class="field" id="mail">purrcatstudio@gmail.com</span>
+          <button class="aqua" id="copy" type="button">Copy email</button>
+        </div>
+        <div class="links" style="justify-content:center">
+          <a class="mbtn" href="https://x.com/purrcatlove" target="_blank" rel="noopener">@purrcatlove on X <i class="ext" aria-hidden="true"></i></a>
+          <a class="mbtn" href="https://www.youtube.com/@PurrcatLara" target="_blank" rel="noopener">YouTube <i class="ext" aria-hidden="true"></i></a>
+          <a class="mbtn" href="https://www.instagram.com/larapurrcat/" target="_blank" rel="noopener">Instagram <i class="ext" aria-hidden="true"></i></a>
+          <a class="mbtn" href="https://substack.com/@purrcat" target="_blank" rel="noopener">Substack <i class="ext" aria-hidden="true"></i></a>
+          <a class="mbtn" href="https://github.com/purrcateth" target="_blank" rel="noopener">GitHub <i class="ext" aria-hidden="true"></i></a>
+          <a class="mbtn" href="https://purrcat.notion.site/" target="_blank" rel="noopener">CV <i class="ext" aria-hidden="true"></i></a>
+        </div>
+        <div class="signoff"><span>With love,</span><span class="sig">Purrcat</span></div>
+      </div>
+      <div class="sbar"><span>Remote from Istanbul</span><span>UTC+3</span></div>
+    </section>
+  </div>
+</main>
+
+<footer class="foot wrap">
+  <span>Purrcat Studio, Istanbul</span>
+  <a href="https://purrcat.studio" target="_blank" rel="noopener">purrcat.studio</a>
+</footer>
+
+<script>
+(() => {
+  const root = document.documentElement;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const byId = (id) => document.getElementById(id);
+  const setText = (id, v) => { const el = byId(id); if (el) el.textContent = v; };
+  const pad = (n) => String(n).padStart(2, '0');
+
+  /* Clocks and air time */
+  function offsetMin(tz, d) {
+    const parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: tz, hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', second: '2-digit'
+    }).formatToParts(d);
+    const g = (t) => Number(parts.find((p) => p.type === t).value);
+    const asUTC = Date.UTC(g('year'), g('month') - 1, g('day'), g('hour'), g('minute'), g('second'));
+    return Math.round((asUTC - d.getTime()) / 60000);
+  }
+  function tick() {
+    const now = new Date();
+    const f = (tz) => new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZone: tz }).format(now);
+    const sf = f('America/Los_Angeles');
+    const ist = f('Europe/Istanbul');
+    setText('t-sf', sf); setText('mb-sf', sf);
+    setText('t-ist', ist); setText('mb-ist', ist);
+    const diff = offsetMin('Europe/Istanbul', now) - offsetMin('America/Los_Angeles', now);
+    const m = (((9 * 60 + diff) % 1440) + 1440) % 1440;
+    setText('air-ist', pad(Math.floor(m / 60)) + ':' + pad(m % 60));
+  }
+  try { tick(); setInterval(tick, 20000); } catch (e) { /* static fallback stays */ }
+
+  /* Playhead: one sweep on load, then it follows the scroll */
+  const playhead = byId('playhead');
+  const readout = byId('readout');
+  const clips = Array.from(document.querySelectorAll('.clip')).map((el) => ({ el, s: Number(el.dataset.s), e: Number(el.dataset.e) }));
+  const timecode = (t) => {
+    const ff = Math.floor((t % 1) * 25);
+    const s = Math.floor(t) % 60;
+    const mm = Math.floor(t / 60) % 60;
+    const hh = Math.floor(t / 3600);
+    return [hh, mm, s, ff].map(pad).join(':');
+  };
+  function setP(p) {
+    p = Math.max(0, Math.min(1, p));
+    playhead.style.left = (p * 100) + '%';
+    readout.textContent = timecode(p * 60);
+    const x = p * 100;
+    clips.forEach((c) => c.el.classList.toggle('on', x >= c.s && x <= c.e));
+  }
+  function scrollP() {
+    const se = document.scrollingElement || document.documentElement;
+    const max = se.scrollHeight - window.innerHeight;
+    return max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+  }
+  const ease = (x) => (x <= 0 ? 0 : x >= 1 ? 1 : x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+  let mode = reduce ? 'track' : 'sweep';
+  if (mode === 'sweep') {
+    const t0 = performance.now();
+    let tBack = 0;
+    const step = (t) => {
+      if (mode === 'sweep') {
+        const x = (t - t0) / 2600;
+        setP(ease(x));
+        if (x >= 1) { mode = 'back'; tBack = t; }
+      } else if (mode === 'back') {
+        const x = (t - tBack) / 650;
+        const target = scrollP();
+        setP(1 + (target - 1) * ease(x));
+        if (x >= 1) { mode = 'track'; setP(scrollP()); return; }
+      }
+      requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  } else {
+    setP(scrollP());
+  }
+  let queued = false;
+  window.addEventListener('scroll', () => {
+    if (mode !== 'track' || queued) return;
+    queued = true;
+    requestAnimationFrame(() => { setP(scrollP()); queued = false; });
+  }, { passive: true });
+
+  /* Card filmstrips: 1-bit frames and a pixel waveform in each track's color */
+  function hash(str) {
+    let h = 2166136261;
+    for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); }
+    return h >>> 0;
+  }
+  function rng(seed) {
+    return () => {
+      seed = (seed + 0x6D2B79F5) | 0;
+      let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  const css = getComputedStyle(root);
+  const INK = css.getPropertyValue('--ink').trim() || '#000';
+  const PAPER = css.getPropertyValue('--paper').trim() || '#fff';
+  function draw(cv) {
+    const box = cv.parentElement;
+    const w = box.clientWidth, h = box.clientHeight;
+    if (!w || !h) return;
+    const dpr = Math.max(1, Math.round(window.devicePixelRatio || 1));
+    cv.width = w * dpr;
+    cv.height = h * dpr;
+    const ctx = cv.getContext('2d');
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.imageSmoothingEnabled = false;
+    const card = cv.closest('.card');
+    const color = (card && getComputedStyle(card).getPropertyValue('--tc').trim()) || css.getPropertyValue('--hot').trim();
+    const pc = document.createElement('canvas');
+    pc.width = 2; pc.height = 2;
+    const p = pc.getContext('2d');
+    p.fillStyle = color; p.fillRect(0, 0, 1, 1); p.fillRect(1, 1, 1, 1);
+    const dither = ctx.createPattern(pc, 'repeat');
+    ctx.fillStyle = PAPER;
+    ctx.fillRect(0, 0, w, h);
+    const r = rng(hash(cv.dataset.seed || 'reel'));
+    const top = 6, fh = h - 26, fw = 46, gap = 4;
+    for (let x = 6; x + 14 < w; x += fw + gap) {
+      const ww = Math.min(fw, w - 6 - x);
+      ctx.fillStyle = INK; ctx.fillRect(x, top, ww, fh);
+      ctx.fillStyle = PAPER; ctx.fillRect(x + 1, top + 1, ww - 2, fh - 2);
+      ctx.fillStyle = dither; ctx.fillRect(x + 1, top + 1, ww - 2, fh - 2);
+      const sw = Math.max(8, Math.round((ww - 2) * (0.32 + r() * 0.34)));
+      const sh = Math.max(8, Math.round((fh - 2) * (0.38 + r() * 0.42)));
+      const sx = x + 1 + Math.round((ww - 2 - sw) * r());
+      const sy = top + fh - 1 - sh;
+      ctx.fillStyle = INK; ctx.fillRect(sx - 1, sy - 1, sw + 2, sh + 1);
+      ctx.fillStyle = color; ctx.fillRect(sx, sy, sw, sh);
+    }
+    const wy = h - 16, wh = 12;
+    let v = 0.5;
+    ctx.fillStyle = INK;
+    for (let x = 6; x < w - 6; x += 2) {
+      v += (r() - 0.5) * 0.5;
+      v = Math.max(0.12, Math.min(1, v));
+      const a = Math.max(1, Math.round((wh / 2) * v * (0.5 + r() * 0.5)));
+      ctx.fillRect(x, wy + wh / 2 - a, 1, a * 2);
+    }
+  }
+  const films = Array.from(document.querySelectorAll('canvas.film'));
+  const redraw = () => films.forEach((cv) => { try { draw(cv); } catch (e) { /* skip */ } });
+  redraw();
+  if ('ResizeObserver' in window) {
+    let raf = 0;
+    const ro = new ResizeObserver(() => { cancelAnimationFrame(raf); raf = requestAnimationFrame(redraw); });
+    films.forEach((cv) => ro.observe(cv.parentElement));
+  } else {
+    window.addEventListener('resize', redraw);
+  }
+
+  /* Copy email */
+  const copyBtn = byId('copy');
+  const mail = byId('mail');
+  copyBtn.addEventListener('click', () => {
+    const text = mail.textContent.trim();
+    const done = (label) => { copyBtn.textContent = label; setTimeout(() => { copyBtn.textContent = 'Copy email'; }, 2200); };
+    const selectIt = () => {
+      const range = document.createRange();
+      range.selectNodeContents(mail);
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      done('Selected, copy it');
+    };
+    try {
+      navigator.clipboard.writeText(text).then(() => done('Copied'), selectIt);
+    } catch (e) {
+      selectIt();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

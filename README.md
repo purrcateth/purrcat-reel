@@ -2,13 +2,13 @@
 
 The portfolio site of Lara (Purrcat), a creative technologist in Istanbul. It covers shorts, shows, podcasts, the Lovebombing community and the Lovebombing app.
 
-Live at https://purrcateth.github.io/purrcat-reel/
+Live at https://agentic-scenester.vercel.app (Vercel), with a copy at https://purrcateth.github.io/purrcat-reel/ (GitHub Pages).
 
 ## How to change text or links
 
 1. Open `index.html` on GitHub and click the pencil icon to edit.
 2. Find the sentence or link you want to change (Cmd+F helps) and edit it.
-3. Click "Commit changes". GitHub Pages republishes the site in about a minute.
+3. Click "Commit changes". Vercel and GitHub Pages both republish the site in about a minute.
 
 ## What is where
 

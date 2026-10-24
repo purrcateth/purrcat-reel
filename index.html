@@ -4,18 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Purrcat Reel</title>
-<meta name="description" content="Shorts, shows, podcasts and the Lovebombing app by Purrcat, a creative technologist in Istanbul.">
+<meta name="description" content="Social media, writing, video, podcasts and community building by Purrcat, a creative technologist in Istanbul.">
 <link rel="canonical" href="https://agentic-scenester.vercel.app/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://agentic-scenester.vercel.app/">
 <meta property="og:title" content="Purrcat Reel">
-<meta property="og:description" content="Shorts, shows, podcasts and the Lovebombing app by Purrcat, a creative technologist in Istanbul.">
+<meta property="og:description" content="Social media, writing, video, podcasts and community building by Purrcat, a creative technologist in Istanbul.">
 <meta property="og:image" content="https://agentic-scenester.vercel.app/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Purrcat Reel">
-<meta name="twitter:description" content="Shorts, shows, podcasts and the Lovebombing app by Purrcat, a creative technologist in Istanbul.">
+<meta name="twitter:description" content="Social media, writing, video, podcasts and community building by Purrcat, a creative technologist in Istanbul.">
 <meta name="twitter:image" content="https://agentic-scenester.vercel.app/assets/og.jpg">
 <meta name="theme-color" content="#87CEEB">
 <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -301,7 +301,7 @@ img { max-width: 100%; }
 .who { margin: -2px 0 0; font-family: var(--font-chrome); font-size: 15px; color: var(--line); }
 .headline {
   margin: 6px 0 0;
-  max-width: 20ch;
+  max-width: 22ch;
   font-family: var(--font-serif);
   font-size: clamp(29px, 3.9vw, 43px);
   line-height: 1.1;
@@ -323,7 +323,7 @@ img { max-width: 100%; }
   text-shadow: -2px 3px 6px var(--shade-faint);
 }
 .info { margin: 0; display: grid; gap: 8px; }
-.info > div { display: grid; grid-template-columns: 7.6em minmax(0, 1fr); gap: 10px; align-items: baseline; }
+.info > div { display: grid; grid-template-columns: 6.6em minmax(0, 1fr); gap: 10px; align-items: baseline; }
 .info dt { font-family: var(--font-chrome); font-size: 15px; color: var(--line); text-align: right; }
 .info dd { margin: 0; font-family: var(--font-pixel); font-size: 21px; line-height: 1.15; color: var(--ink); overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
 .info-note { margin: 0; padding: 10px 12px; background: var(--paper); border: 1px solid var(--ink); font-size: 17px; line-height: 1.45; }
@@ -333,7 +333,7 @@ img { max-width: 100%; }
 .tl {
   display: grid;
   grid-template-columns: 44px minmax(0, 1fr);
-  grid-template-rows: 34px repeat(4, 36px);
+  grid-template-rows: 34px repeat(5, 36px);
   background: var(--paper);
 }
 .lab {
@@ -404,6 +404,7 @@ img { max-width: 100%; }
   white-space: nowrap;
 }
 .clip:hover { box-shadow: inset 0 0 0 1px var(--ink); }
+.clip.dark { color: var(--paper); }
 .clip.on { background: var(--ink); color: var(--paper); }
 .overlay { grid-column: 2; grid-row: 1 / -1; position: relative; z-index: 3; pointer-events: none; }
 .playhead { position: absolute; top: 0; bottom: 0; left: 0; width: 2px; margin-left: -1px; background: var(--hot); }
@@ -464,6 +465,55 @@ img { max-width: 100%; }
 .role { margin: 0; font-family: var(--font-chrome); font-size: 14px; color: var(--line); }
 .desc { margin: 0; font-size: 17px; line-height: 1.5; }
 .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 8px; }
+
+/* Writing */
+.feature { display: grid; gap: 8px; padding: 18px 18px 20px; background: var(--paper); border: 1px solid var(--ink); box-shadow: 2px 2px 0 var(--shade-soft); }
+.feature h3 { margin: 0; font-family: var(--font-serif); font-size: clamp(27px, 3.6vw, 38px); line-height: 1.08; color: var(--navy); text-wrap: balance; }
+.feature h3 a { text-decoration: none; }
+.feature h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.feature .desc { max-width: 60ch; }
+.feature .links { padding-top: 6px; }
+.finder { margin-top: 18px; background: var(--paper); border: 1px solid var(--ink); box-shadow: 2px 2px 0 var(--shade-soft); }
+.flist { list-style: none; margin: 0; padding: 0; }
+.flist li + li .frow { border-top: 1px solid var(--mac-light); }
+.frow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 8.6em 7.4em 4.2em;
+  gap: 14px;
+  align-items: baseline;
+  padding: 11px 14px;
+  color: var(--text);
+  text-decoration: none;
+}
+.fhead { padding-block: 4px; background: var(--mac-light); border-bottom: 1px solid var(--ink); font-family: var(--font-chrome); font-size: 14px; color: var(--ink); }
+.fname { min-width: 0; font-size: 19px; line-height: 1.3; color: var(--navy); }
+.fsub { display: block; margin-top: 2px; font-size: 15px; line-height: 1.4; color: var(--prose); }
+.fkind, .fdate, .fread { font-family: var(--font-pixel); font-size: 18px; line-height: 1.2; white-space: nowrap; color: var(--line); font-variant-numeric: tabular-nums; }
+.fread { text-align: right; }
+a.frow:hover, a.frow:focus-visible { background: var(--navy); outline: none; }
+a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
+@media (max-width: 640px) {
+  .fhead { display: none; }
+  .frow { grid-template-columns: minmax(0, 1fr) auto; row-gap: 4px; }
+  .fname { grid-column: 1 / -1; }
+  .fkind { display: none; }
+}
+
+/* AI arc progress bar */
+.arc { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.arc-bar { position: relative; display: inline-block; width: 64px; height: 14px; background: var(--paper); border: 1px solid var(--ink); overflow: hidden; }
+.arc-bar i {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 42%;
+  border-right: 1px solid var(--ink);
+  background-image: linear-gradient(-45deg, var(--hot) 25%, var(--window) 25%, var(--window) 50%, var(--hot) 50%, var(--hot) 75%, var(--window) 75%);
+  background-size: 12px 12px;
+  animation: arc 1.4s linear infinite;
+}
+@keyframes arc { from { background-position: 0 0; } to { background-position: 12px 0; } }
 
 /* Lovebombing pair */
 .pair { display: grid; gap: clamp(36px, 6vw, 56px); align-items: start; margin-top: clamp(36px, 6vw, 56px); }
@@ -531,6 +581,7 @@ img { max-width: 100%; }
 /* Off the timeline */
 .off { display: grid; gap: 18px; }
 @media (min-width: 760px) { .off { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.off.one { grid-template-columns: minmax(0, 1fr); max-width: 760px; }
 .off > div { display: grid; gap: 8px; align-content: start; min-width: 0; padding: 16px; background: var(--paper); border: 1px solid var(--ink); box-shadow: 2px 2px 0 var(--shade-soft); }
 .off h3 { margin: 0; font-family: var(--font-serif); font-size: 24px; line-height: 1.15; color: var(--navy); }
 .off .links { margin-top: 2px; padding-top: 0; }
@@ -556,6 +607,7 @@ img { max-width: 100%; }
   html { scroll-behavior: auto; }
   .win { animation: none; }
   .caret { animation: none; }
+  .arc-bar i { animation: none; }
 }
 </style>
 </head>
@@ -567,15 +619,15 @@ img { max-width: 100%; }
     <a class="mb-logo" href="#top" aria-label="Back to top"><img src="assets/flower.webp" alt="" width="520" height="512"></a>
     <div class="mb-items">
       <a class="mb-hide-sm" href="#top">Purrcat</a>
+      <a href="#writing">Writing</a>
       <a href="#shorts">Shorts</a>
-      <a href="#shows">Shows</a>
+      <a class="mb-hide-sm" href="#shows">Shows</a>
       <a href="#lovebombing">Lovebombing</a>
       <a class="mb-hide-sm" href="#method">Method</a>
       <a href="#contact">Contact</a>
     </div>
-    <div class="mb-clock" aria-label="Time in San Francisco and Istanbul">
-      <span>SF <span id="mb-sf">--:--</span></span>
-      <span>IST <span id="mb-ist">--:--</span></span>
+    <div class="mb-clock" aria-label="Time in Istanbul">
+      <span>Istanbul <span id="mb-ist">--:--</span></span>
     </div>
   </nav>
 </header>
@@ -589,33 +641,29 @@ img { max-width: 100%; }
           <img class="sticker" src="assets/flower.webp" alt="" width="520" height="512">
           <h1 class="wordmark" id="h-top">Purrcat</h1>
           <p class="who">Lara / creative technologist / Istanbul</p>
-          <p class="headline">I host the stream, run the board, and cut the clips.</p>
-          <p class="lede">I’ve spent the last few years making live shows, two podcasts and X Spaces for internet-native communities, mostly in crypto. Now I’m all in on AI. Everything here shows how I find a moment and get it onto the timeline.</p>
-          <div class="fieldrow">
-            <span class="flabel">Applying for:</span>
-            <span class="field">Short-form clip editor at MTS<i class="caret" aria-hidden="true"></i></span>
-          </div>
+          <p class="headline">I make the posts, videos and communities people actually show up for.</p>
+          <p class="lede">I’ve been a social media manager and lead in crypto since 2024, starting at Seed Club and then at teams like Dora, writing the posts, making the designs and building brand assets. In 2025 I started making video too: livestreams, shorts and two podcasts. Along the way I built my own community, Lovebombing, INC, which started as a group chat in December 2024 and grew into X Spaces, a weekly show and IRL events. Now I’m taking all of it into AI.</p>
           <div class="actions">
-            <a class="aqua" href="#shorts">Watch the shorts</a>
+            <a class="aqua" href="#writing">See my work</a>
             <a class="mbtn" href="#contact">Get in touch</a>
           </div>
         </div>
       </section>
 
       <aside class="win win-info" aria-labelledby="h-info">
-        <div class="tbar" aria-hidden="true"><i class="box"></i><span>MTS Info</span><i class="box ghost"></i></div>
+        <div class="tbar" aria-hidden="true"><i class="box"></i><span>Purrcat Info</span><i class="box ghost"></i></div>
         <div class="info-body">
-          <h2 class="info-h" id="h-info">Applying to MTS</h2>
+          <h2 class="info-h" id="h-info">At a glance</h2>
           <dl class="info">
-            <div><dt>Feeds:</dt><dd>X, Reels, IG</dd></div>
-            <div><dt>Where:</dt><dd>Remote, from Istanbul</dd></div>
-            <div><dt>SF now:</dt><dd id="t-sf">--:--</dd></div>
-            <div><dt>Istanbul now:</dt><dd id="t-ist">--:--</dd></div>
-            <div><dt>On air:</dt><dd>09:00 PT, <span id="air-ist">19:00</span> here</dd></div>
+            <div><dt>Kind:</dt><dd>Creative technologist</dd></div>
+            <div><dt>Where:</dt><dd>Istanbul, remote</dd></div>
+            <div><dt>Social media:</dt><dd>Since 2024</dd></div>
+            <div><dt>Video:</dt><dd>Since 2025</dd></div>
+            <div><dt>Community:</dt><dd>Lovebombing, INC</dd></div>
+            <div><dt>Now:</dt><dd><span class="arc"><span class="arc-bar" aria-hidden="true"><i></i></span>AI arc loading</span></dd></div>
           </dl>
-          <p class="info-note">My evening overlaps your morning on air, so I can cut while you stream.</p>
         </div>
-        <div class="sbar"><span>Live weekdays at 09:00 PT</span></div>
+        <div class="sbar"><span>6 items</span><span>Istanbul, UTC+3</span></div>
       </aside>
     </div>
 
@@ -631,28 +679,32 @@ img { max-width: 100%; }
           <span class="tick" style="--x:66.6667" aria-hidden="true">00:40</span>
           <span class="tick minor" style="--x:83.3333" aria-hidden="true">00:50</span>
           <span class="tick last" style="--x:100" aria-hidden="true">01:00</span>
-          <a class="mark" href="#method" style="--x:20" aria-label="Moment marker: how I'd cut MTS"></a>
-          <a class="mark" href="#method" style="--x:62" aria-label="Moment marker: how I'd cut MTS"></a>
-          <a class="mark" href="#method" style="--x:76" aria-label="Moment marker: how I'd cut MTS"></a>
+          <a class="mark" href="#method" style="--x:18" aria-label="Moment marker: how I work"></a>
+          <a class="mark" href="#method" style="--x:50" aria-label="Moment marker: how I work"></a>
+          <a class="mark" href="#method" style="--x:78" aria-label="Moment marker: how I work"></a>
         </div>
 
-        <div class="lab" style="grid-row:2">V2</div>
+        <div class="lab" style="grid-row:2">T1</div>
         <div class="lane" style="grid-row:2">
-          <a class="clip" href="#shorts" style="--s:6;--e:34;--tc:var(--hot)" data-s="6" data-e="34">Shorts</a>
-          <a class="clip" href="#lovebombing" style="--s:54;--e:72;--tc:var(--window)" data-s="54" data-e="72">App</a>
+          <a class="clip dark" href="#writing" style="--s:6;--e:28;--tc:var(--navy)" data-s="6" data-e="28">Writing</a>
         </div>
-        <div class="lab" style="grid-row:3">V1</div>
+        <div class="lab" style="grid-row:3">V2</div>
         <div class="lane" style="grid-row:3">
-          <a class="clip" href="#shows" style="--s:30;--e:52;--tc:var(--steel)" data-s="30" data-e="52">Shows</a>
-          <a class="clip" href="#offline" style="--s:80;--e:100;--tc:var(--mac-silver)" data-s="80" data-e="100">IRL</a>
+          <a class="clip" href="#shorts" style="--s:26;--e:42;--tc:var(--hot)" data-s="26" data-e="42">Shorts</a>
+          <a class="clip" href="#lovebombing" style="--s:58;--e:74;--tc:var(--window)" data-s="58" data-e="74">App</a>
         </div>
-        <div class="lab" style="grid-row:4">A1</div>
+        <div class="lab" style="grid-row:4">V1</div>
         <div class="lane" style="grid-row:4">
-          <a class="clip" href="#shows" style="--s:32;--e:54;--tc:var(--sky)" data-s="32" data-e="54">Podcasts</a>
+          <a class="clip" href="#shows" style="--s:40;--e:56;--tc:var(--steel)" data-s="40" data-e="56">Shows</a>
+          <a class="clip" href="#offline" style="--s:82;--e:96;--tc:var(--mac-silver)" data-s="82" data-e="96">IRL</a>
         </div>
-        <div class="lab" style="grid-row:5">A2</div>
+        <div class="lab" style="grid-row:5">A1</div>
         <div class="lane" style="grid-row:5">
-          <a class="clip" href="#lovebombing" style="--s:50;--e:70;--tc:var(--window)" data-s="50" data-e="70">Spaces</a>
+          <a class="clip" href="#shows" style="--s:42;--e:58;--tc:var(--sky)" data-s="42" data-e="58">Podcasts</a>
+        </div>
+        <div class="lab" style="grid-row:6">A2</div>
+        <div class="lane" style="grid-row:6">
+          <a class="clip" href="#lovebombing" style="--s:54;--e:72;--tc:var(--window)" data-s="54" data-e="72">Spaces</a>
         </div>
 
         <div class="overlay" aria-hidden="true"><div class="playhead" id="playhead"></div></div>
@@ -662,6 +714,36 @@ img { max-width: 100%; }
   </div>
 
   <div class="wrap">
+    <section class="win sec" id="writing" aria-labelledby="h-writing">
+      <div class="tbar" aria-hidden="true"><i class="box"></i><span>Purrcat Purring</span><i class="box ghost"></i></div>
+      <div class="sec-body">
+        <header class="sec-head">
+          <h2 id="h-writing">Writing</h2>
+          <p class="sec-intro">Essays and short pieces on AI, work, creativity and life in between, from my Substack, Purrcat Purring.</p>
+        </header>
+        <article class="feature">
+          <p class="role">Featured essay / Apr 22, 2026 / 13 min read</p>
+          <h3><a href="https://purrcat.substack.com/p/having-a-job-like-rick-rubin-in-the" target="_blank" rel="noopener">AI and learning how to dream again</a></h3>
+          <p class="desc">On the genie lamp problem, the death of the how, and why knowing what you want is the only skill left.</p>
+          <div class="links"><a class="aqua" href="https://purrcat.substack.com/p/having-a-job-like-rick-rubin-in-the" target="_blank" rel="noopener">Read the essay</a></div>
+        </article>
+        <div class="finder">
+          <div class="frow fhead" aria-hidden="true"><span>Name</span><span>Kind</span><span>Date</span><span>Read</span></div>
+          <ul class="flist" aria-label="More posts from Purrcat Purring">
+            <li><a class="frow" href="https://purrcat.substack.com/p/summer-rain-with-commas-and-the-earthy" target="_blank" rel="noopener"><span class="fname">Summer rain with commas and the earthy smell after the rain</span><span class="fkind">Short piece</span><span class="fdate">Jul 4, 2026</span><span class="fread">3 min</span></a></li>
+            <li><a class="frow" href="https://purrcat.substack.com/p/on-what-sings-and-untouched" target="_blank" rel="noopener"><span class="fname">On what sings and “Untouched”<span class="fsub">About the music of my life</span></span><span class="fkind">Short piece</span><span class="fdate">Jul 3, 2026</span><span class="fread">1 min</span></a></li>
+            <li><a class="frow" href="https://purrcat.substack.com/p/nothing-new-can-find-you-while-your" target="_blank" rel="noopener"><span class="fname">Nothing new can find you while your hands are full<span class="fsub">On quitting, sunk cost fallacy, and why manifestation needs empty hands.</span></span><span class="fkind">Essay</span><span class="fdate">Mar 21, 2026</span><span class="fread">13 min</span></a></li>
+            <li><a class="frow" href="https://purrcat.substack.com/p/finding-joy-in-between-advice-session" target="_blank" rel="noopener"><span class="fname">Finding Joy in Between<span class="fsub">You can be joyful and in between.</span></span><span class="fkind">Advice session</span><span class="fdate">Mar 2, 2026</span><span class="fread">19 min</span></a></li>
+            <li><a class="frow" href="https://purrcat.substack.com/p/first-podcast-or-stream-of-consciousness" target="_blank" rel="noopener"><span class="fname">First podcast or stream of consciousness in HK<span class="fsub">Your unemployed friend on a Wednesday afternoon but make it real.</span></span><span class="fkind">Essay</span><span class="fdate">Feb 19, 2026</span><span class="fread">12 min</span></a></li>
+            <li><a class="frow" href="https://purrcat.substack.com/p/magick" target="_blank" rel="noopener"><span class="fname">Magick</span><span class="fkind">Short piece</span><span class="fdate">Oct 15, 2025</span><span class="fread">1 min</span></a></li>
+            <li><a class="frow" href="https://purrcat.substack.com/p/new-romance" target="_blank" rel="noopener"><span class="fname">New romance</span><span class="fkind">Short piece</span><span class="fdate">Jun 6, 2025</span><span class="fread">1 min</span></a></li>
+          </ul>
+        </div>
+        <div class="links after"><a class="mbtn" href="https://purrcat.substack.com" target="_blank" rel="noopener">Subscribe on Substack <i class="ext" aria-hidden="true"></i></a></div>
+      </div>
+      <div class="sbar"><span>8 posts</span><span>Track T1</span></div>
+    </section>
+
     <section class="win sec" id="shorts" aria-labelledby="h-shorts">
       <div class="tbar" aria-hidden="true"><i class="box"></i><span>Shorts</span><i class="box ghost"></i></div>
       <div class="sec-body">
@@ -791,18 +873,18 @@ img { max-width: 100%; }
       <div class="sec-body">
         <div class="method">
           <div class="method-intro">
-            <h2 id="h-method">How I’d cut MTS</h2>
-            <p class="sec-intro">A daily show makes hours of great talk. The job is finding the forty seconds people will quote, and getting them out while the topic is still moving.</p>
+            <h2 id="h-method">How I work</h2>
+            <p class="sec-intro">Good content starts with paying attention. I watch what people react to, then build the post, the clip or the room around it.</p>
             <div class="kit" aria-label="Tools I use">
               <span class="chip">OBS</span><span class="chip">Restream</span><span class="chip">CapCut</span><span class="chip">Descript</span><span class="chip">Canva</span><span class="chip">Adobe Firefly</span><span class="chip">Figma</span><span class="chip">Claude Code</span><span class="chip">Sony ZV-E10</span><span class="chip">DJI Osmo Pocket 3</span><span class="chip">Elgato Cam Link 4K</span>
             </div>
           </div>
           <ol class="steps">
-            <li><div class="n"><i class="hrt" aria-hidden="true"></i>1</div><div><strong>Watch it live</strong><p>I mark moments as they happen: a sharp claim, a laugh, a take people will argue about.</p></div></li>
-            <li><div class="n"><i class="hrt" aria-hidden="true"></i>2</div><div><strong>Start on the idea</strong><p>The clip opens on the sentence that carries it, with no warm-up in front.</p></div></li>
-            <li><div class="n"><i class="hrt" aria-hidden="true"></i>3</div><div><strong>Caption it like a post</strong><p>On-screen words sound like a person on the timeline, so the clip works with the sound off.</p></div></li>
-            <li><div class="n"><i class="hrt" aria-hidden="true"></i>4</div><div><strong>Cut for each feed</strong><p>16:9 or square with burned-in captions for X, and 9:16 for Reels and IG.</p></div></li>
-            <li><div class="n"><i class="hrt" aria-hidden="true"></i>5</div><div><strong>Ship while it’s hot</strong><p>A daily show runs on the timeline’s clock, so speed is part of the edit.</p></div></li>
+            <li><div class="n"><i class="hrt" aria-hidden="true"></i>1</div><div><strong>Live on the timeline</strong><p>I follow conversations as they happen and notice what people actually care about.</p></div></li>
+            <li><div class="n"><i class="hrt" aria-hidden="true"></i>2</div><div><strong>Lead with the idea</strong><p>Every post, clip and thread opens on the thing that matters, with no warm-up in front.</p></div></li>
+            <li><div class="n"><i class="hrt" aria-hidden="true"></i>3</div><div><strong>Write like a person</strong><p>Copy that sounds like someone on the timeline, not like a brand account.</p></div></li>
+            <li><div class="n"><i class="hrt" aria-hidden="true"></i>4</div><div><strong>Fit each platform</strong><p>X, Reels, YouTube and Spotify each get their own cut, format and caption.</p></div></li>
+            <li><div class="n"><i class="hrt" aria-hidden="true"></i>5</div><div><strong>Build the room</strong><p>Spaces, group chats and IRL events turn an audience into regulars.</p></div></li>
           </ol>
         </div>
       </div>
@@ -813,20 +895,14 @@ img { max-width: 100%; }
       <div class="tbar" aria-hidden="true"><i class="box"></i><span>IRL</span><i class="box ghost"></i></div>
       <div class="sec-body">
         <header class="sec-head"><h2 id="h-off">Off the timeline</h2></header>
-        <div class="off">
+        <div class="off one">
           <div>
             <p class="role">IRL</p>
             <h3>Conference side events</h3>
             <p class="desc">Sponsorships and side events at Token2049, Devcon, Devconnect, Consensus, EthCC, ETH Denver and Solana Breakpoint since 2022, including a prediction markets workshop in Argentina before Devconnect.</p>
           </div>
-          <div>
-            <p class="role">Writing</p>
-            <h3>Essays on Substack</h3>
-            <p class="desc">Longer pieces about work, culture and life between chapters.</p>
-            <div class="links"><a class="mbtn" href="https://substack.com/@purrcat" target="_blank" rel="noopener">Substack <i class="ext" aria-hidden="true"></i></a></div>
-          </div>
         </div>
-        <p class="also">Also: a beginner trading video series I made as Purrcat for Sai, a perpetual trading platform, and video edits, animations and social kits for Dora.</p>
+        <p class="also">Also: video edits, animations and social kits for Dora.</p>
       </div>
       <div class="sbar"><span>Since 2022</span><span>Track V1</span></div>
     </section>
@@ -834,7 +910,7 @@ img { max-width: 100%; }
     <section class="win sec" id="contact" aria-labelledby="h-contact">
       <div class="tbar" aria-hidden="true"><i class="box"></i><span>Contact</span><i class="box ghost"></i></div>
       <div class="sec-body contact-body">
-        <h2 id="h-contact">Send me an episode. I’ll send back clips.</h2>
+        <h2 id="h-contact">Get in touch</h2>
         <p class="sec-intro">DMs on X are fastest. Email works too.</p>
         <div class="fieldrow">
           <span class="flabel">Email:</span>
@@ -845,7 +921,7 @@ img { max-width: 100%; }
           <a class="mbtn" href="https://x.com/peaceofd0ve" target="_blank" rel="noopener">@peaceofd0ve on X <i class="ext" aria-hidden="true"></i></a>
           <a class="mbtn" href="https://www.youtube.com/@PurrcatLara" target="_blank" rel="noopener">YouTube <i class="ext" aria-hidden="true"></i></a>
           <a class="mbtn" href="https://www.instagram.com/larapurrcat/" target="_blank" rel="noopener">Instagram <i class="ext" aria-hidden="true"></i></a>
-          <a class="mbtn" href="https://substack.com/@purrcat" target="_blank" rel="noopener">Substack <i class="ext" aria-hidden="true"></i></a>
+          <a class="mbtn" href="https://purrcat.substack.com" target="_blank" rel="noopener">Substack <i class="ext" aria-hidden="true"></i></a>
           <a class="mbtn" href="https://github.com/purrcateth" target="_blank" rel="noopener">GitHub <i class="ext" aria-hidden="true"></i></a>
           <a class="mbtn" href="https://purrcat.notion.site/" target="_blank" rel="noopener">CV <i class="ext" aria-hidden="true"></i></a>
         </div>
@@ -869,26 +945,11 @@ img { max-width: 100%; }
   const setText = (id, v) => { const el = byId(id); if (el) el.textContent = v; };
   const pad = (n) => String(n).padStart(2, '0');
 
-  /* Clocks and air time */
-  function offsetMin(tz, d) {
-    const parts = new Intl.DateTimeFormat('en-US', {
-      timeZone: tz, hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit',
-      hour: '2-digit', minute: '2-digit', second: '2-digit'
-    }).formatToParts(d);
-    const g = (t) => Number(parts.find((p) => p.type === t).value);
-    const asUTC = Date.UTC(g('year'), g('month') - 1, g('day'), g('hour'), g('minute'), g('second'));
-    return Math.round((asUTC - d.getTime()) / 60000);
-  }
+  /* Istanbul clock in the menu bar */
   function tick() {
     const now = new Date();
-    const f = (tz) => new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZone: tz }).format(now);
-    const sf = f('America/Los_Angeles');
-    const ist = f('Europe/Istanbul');
-    setText('t-sf', sf); setText('mb-sf', sf);
-    setText('t-ist', ist); setText('mb-ist', ist);
-    const diff = offsetMin('Europe/Istanbul', now) - offsetMin('America/Los_Angeles', now);
-    const m = (((9 * 60 + diff) % 1440) + 1440) % 1440;
-    setText('air-ist', pad(Math.floor(m / 60)) + ':' + pad(m % 60));
+    const ist = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZone: 'Europe/Istanbul' }).format(now);
+    setText('mb-ist', ist);
   }
   try { tick(); setInterval(tick, 20000); } catch (e) { /* static fallback stays */ }
 

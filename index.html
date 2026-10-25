@@ -521,8 +521,10 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
 .pair > .sec { margin-top: 0; }
 .pair > .win { display: flex; flex-direction: column; }
 .pair > .win > .sec-body, .pair > .win > .app-body { flex: 1 1 auto; }
+.pair > .win > .sec-body { display: flex; flex-direction: column; }
+.pair .after { margin-top: auto; padding-top: 18px; }
 @media (min-width: 920px) {
-  .pair { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; align-items: stretch; }
+  .pair { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 32px; align-items: stretch; }
 }
 .history, .steps { list-style: none; margin: 0; padding: 0; }
 .history li, .steps li {
@@ -537,7 +539,7 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
 .n { font-family: var(--font-pixel); font-size: 20px; line-height: 1.2; color: var(--navy); display: flex; gap: 4px; align-items: flex-start; }
 .n .hrt { width: 12px; height: 10px; margin-top: 4px; }
 .history strong, .steps strong { display: block; font-family: var(--font-chrome); font-weight: normal; font-size: 16px; color: var(--ink); }
-.history p, .steps p { margin: 3px 0 0; font-size: 17px; line-height: 1.5; }
+.history p, .steps p { margin: 3px 0 0; font-size: 17px; line-height: 1.5; text-wrap: pretty; }
 .after { margin-top: 18px; }
 
 .win-app .app-body {
@@ -546,7 +548,7 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
   align-items: center;
   justify-content: center;
   gap: 16px;
-  padding: clamp(28px, 5vw, 40px) clamp(16px, 4vw, 30px) 28px;
+  padding: clamp(28px, 5vw, 40px) clamp(16px, 4vw, 30px) clamp(22px, 4vw, 34px);
   text-align: center;
 }
 .app-word {
@@ -557,7 +559,7 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
   color: var(--navy);
   text-shadow: -3.5px 6px 12px var(--shade-soft), 0 4.5px 4.5px var(--shade-soft);
 }
-.app-blurb { margin: 0; max-width: 44ch; font-family: var(--font-prose); font-size: 16px; line-height: 1.75; color: var(--prose); }
+.app-blurb { margin: 0; max-width: 52ch; font-family: var(--font-prose); font-size: 16px; line-height: 1.75; color: var(--prose); text-wrap: pretty; }
 .spec { margin: 0; width: 100%; display: grid; gap: 8px; padding: 12px 14px; text-align: left; background: var(--paper); border: 1px solid var(--ink); }
 .spec > div { display: grid; grid-template-columns: 6.4em minmax(0, 1fr); gap: 10px; align-items: baseline; }
 .spec dt { font-family: var(--font-chrome); font-size: 14px; color: var(--line); }
@@ -1073,7 +1075,9 @@ html.lt-lock { overflow: hidden; }
         <div class="tbar" aria-hidden="true"><i class="box"></i><span>Lovebombing</span><i class="box ghost"></i></div>
         <div class="app-body">
           <h2 class="app-word" id="h-app">Lovebombing</h2>
-          <p class="app-blurb">I planned Lovebombing as an online mail art project, inspired by Ray Johnson. Each piece is a handmade digital love note: you pick a frame, collage images, clips and stickers, and build a beat on a small sequencer. The making is recorded as a timelapse. Each receiver adds a layer and sends it on. The chain is the work.</p>
+          <p class="app-blurb">In the 1950s, Ray Johnson mailed small collages to friends and asked them to add something and pass it on. The post office became his gallery. Mail art grew from there into a worldwide network of artists exchanging gifts, held together by trust and the promise to write back.</p>
+          <p class="app-blurb">Every era has its own network: the post, then television, then the internet. New media art turns each one into a place to meet. Now that feeds sell our attention and machines write more of what we read, a small thing made by hand matters more than ever.</p>
+          <p class="app-blurb">Lovebombing is mail art for the internet we live in now. You make a love note by hand from images, clips, stickers and a beat you build yourself. A timelapse of the making travels with it. Each receiver adds a layer and sends it on. The chain is the work.</p>
           <dl class="spec">
             <div><dt>Built with:</dt><dd>Next.js, Fabric.js, ffmpeg in the browser, Supabase</dd></div>
             <div><dt>Made with:</dt><dd>Claude Code and Figma</dd></div>

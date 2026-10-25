@@ -4,18 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Purrcat Reel</title>
-<meta name="description" content="Purrcat is Lara, a mixed media creative technologist in Istanbul. She builds rooms where the internet gathers.">
+<meta name="description" content="Purrcat is Lara, a creative technologist in Istanbul. She would love to monitor the situation with MTS, and she has so many questions.">
 <link rel="canonical" href="https://agentic-scenester.vercel.app/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://agentic-scenester.vercel.app/">
 <meta property="og:title" content="Purrcat Reel">
-<meta property="og:description" content="Purrcat is Lara, a mixed media creative technologist in Istanbul. She builds rooms where the internet gathers.">
+<meta property="og:description" content="Purrcat is Lara, a creative technologist in Istanbul. She would love to monitor the situation with MTS, and she has so many questions.">
 <meta property="og:image" content="https://agentic-scenester.vercel.app/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Purrcat Reel">
-<meta name="twitter:description" content="Purrcat is Lara, a mixed media creative technologist in Istanbul. She builds rooms where the internet gathers.">
+<meta name="twitter:description" content="Purrcat is Lara, a creative technologist in Istanbul. She would love to monitor the situation with MTS, and she has so many questions.">
 <meta name="twitter:image" content="https://agentic-scenester.vercel.app/assets/og.jpg">
 <meta name="theme-color" content="#87CEEB">
 <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -310,6 +310,7 @@ img { max-width: 100%; }
   text-wrap: balance;
   text-shadow: -2px 3px 6px var(--shade-faint);
 }
+.headline span { display: block; }
 .lede { margin: 0; max-width: 50ch; font-family: var(--font-prose); font-size: 17px; line-height: 1.75; color: var(--prose); text-wrap: pretty; }
 .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 4px; }
 
@@ -433,7 +434,7 @@ img { max-width: 100%; }
   text-wrap: balance;
   text-shadow: -2px 3px 6px var(--shade-faint);
 }
-.sec-intro { margin: 0; max-width: 60ch; font-family: var(--font-prose); font-size: 17px; line-height: 1.75; color: var(--prose); }
+.sec-intro { margin: 0; max-width: 60ch; font-family: var(--font-prose); font-size: 17px; line-height: 1.75; color: var(--prose); text-wrap: pretty; }
 
 .grid { display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 760px) { .grid.c2, .grid.c3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -516,6 +517,14 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
   animation: arc 1.4s linear infinite;
 }
 @keyframes arc { from { background-position: 0 0; } to { background-position: 12px 0; } }
+
+/* Letter to MTS */
+.letter { display: grid; gap: 28px; }
+@media (min-width: 880px) { .letter { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 44px; } }
+.letter-note { display: grid; gap: 14px; align-content: start; }
+.letter-note .links { margin-top: 4px; padding-top: 0; }
+.letter-sign { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; margin-top: 4px; font-family: var(--font-chrome); font-size: 15px; }
+.letter-h { margin: 0 0 8px; font-family: var(--font-chrome); font-weight: normal; font-size: 16px; color: var(--ink); }
 
 /* Lovebombing pair */
 .pair { display: grid; gap: clamp(36px, 6vw, 56px); align-items: start; margin-top: clamp(36px, 6vw, 56px); }
@@ -829,6 +838,7 @@ html.lt-lock { overflow: hidden; }
     <a class="mb-logo" href="#top" aria-label="Back to top"><img src="assets/flower.webp" alt="" width="520" height="512"></a>
     <div class="mb-items">
       <a class="mb-hide-sm" href="#top">Purrcat</a>
+      <a href="#mts">MTS</a>
       <a href="#shows">Shows</a>
       <a href="#work">Work</a>
       <a href="#lovebombing">Lovebombing</a>
@@ -851,12 +861,12 @@ html.lt-lock { overflow: hidden; }
           <img class="sticker" src="assets/flower.webp" alt="" width="520" height="512">
           <h1 class="wordmark" id="h-top">Purrcat</h1>
           <p class="who"><span>Lara / creative technologist / Istanbul</span><span>Mixed media: posts, livestreams, code, collage and people</span></p>
-          <p class="headline">I build rooms where the internet gathers.</p>
-          <p class="lede">I studied psychology and sociology, interned at Vogue Turkey and worked as a UX researcher and designer, teaching myself every tool as I went. NFT communities pulled me into crypto. Since 2024 I’ve run social media for teams like Seed Club and Dora, hosted a weekly interview show and a podcast of my own, and grew a group chat into Lovebombing, INC.</p>
-          <p class="lede">Over time I realized my real medium is people: why they gather, how they come to trust each other and what they make together. That’s what pulls me toward human-computer interaction, the place where people and machines meet. With AI now in everything we touch, from how we write to how we play and love, that place keeps growing, and so does what we can imagine. I want to build there: tools, games and mixed media work that keep a human hand inside the machine.</p>
+          <p class="headline"><span>Can I monitor the situation with you?</span> <span>I have so many questions.</span></p>
+          <p class="lede">I’m Lara. I studied psychology and sociology, interned at Vogue Turkey, worked as a UX researcher and designer, and wandered into crypto through NFT communities. Since 2024 I’ve run social media for teams like Seed Club and Dora, hosted a weekly interview show and a podcast of my own, and grew a group chat into Lovebombing, INC.</p>
+          <p class="lede">Now I’m diving into AI, and MTS looks like the deep end I’ve been dreaming about. I want to be in the room every weekday, learning from the people building it, helping the best moments travel and slowly growing a point of view that’s all mine.</p>
           <div class="actions">
-            <a class="aqua" href="#shows">See my work</a>
-            <a class="mbtn" href="#contact">Get in touch</a>
+            <a class="aqua" href="#mts">Read my letter</a>
+            <a class="mbtn" href="#shows">See my work</a>
           </div>
         </div>
       </section>
@@ -945,6 +955,32 @@ html.lt-lock { overflow: hidden; }
   </div>
 
   <div class="wrap">
+    <section class="win sec" id="mts" aria-labelledby="h-mts">
+      <div class="tbar" aria-hidden="true"><i class="box"></i><span>Letter to MTS</span><i class="box ghost"></i></div>
+      <div class="sec-body">
+        <div class="letter">
+          <div class="letter-note">
+            <h2 id="h-mts">Dear MTS,</h2>
+            <p class="sec-intro">You take the loudest place on the internet, the timeline, and make sense of it live with the people building AI. I love that kind of chaos. AI is the story of my generation, and you tell it every weekday, as it happens.</p>
+            <p class="sec-intro">I want to learn how AI really gets built, funded, argued about and used, close enough to form my own opinions. I’m especially curious about how it changes the way people and computers meet, and every guest is a new piece of that puzzle.</p>
+            <div class="letter-sign"><span>See you at 9 PT,</span><span class="sig">Purrcat</span></div>
+            <div class="links"><a class="aqua" href="mailto:purrcatstudio@gmail.com">Write back</a></div>
+          </div>
+          <div class="letter-bring">
+            <h3 class="letter-h">What I’d bring</h3>
+            <ol class="history">
+              <li><i class="hrt" aria-hidden="true"></i><div><strong>Clips that travel</strong><p>I’ve clipped, edited and captioned my own livestreams and interviews for X, YouTube and Instagram.</p></div></li>
+              <li><i class="hrt" aria-hidden="true"></i><div><strong>Live production</strong><p>I streamed weekly to X, YouTube, Twitch and Instagram at the same time with OBS and Restream.</p></div></li>
+              <li><i class="hrt" aria-hidden="true"></i><div><strong>An interviewer’s ear</strong><p>I’ve hosted founders, creators and industry leaders, so I can hear the moment worth clipping.</p></div></li>
+              <li><i class="hrt" aria-hidden="true"></i><div><strong>Timeline fluency</strong><p>I know how memes and moods travel between tech, crypto and the mainstream, and how to post like a person.</p></div></li>
+              <li><i class="hrt" aria-hidden="true"></i><div><strong>Design and community</strong><p>I make brand assets and collage, and I know how to turn an audience into regulars.</p></div></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="sbar"><span>Sent from Istanbul</span><span>Live at 9 PT</span></div>
+    </section>
+
     <section class="win sec" id="shows" aria-labelledby="h-shows">
       <div class="tbar" aria-hidden="true"><i class="box"></i><span>Shows</span><i class="box ghost"></i></div>
       <div class="sec-body">

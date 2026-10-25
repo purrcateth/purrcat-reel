@@ -927,7 +927,7 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
         <div class="fieldrow">
           <span class="flabel">Email:</span>
           <span class="field" id="mail">purrcatstudio@gmail.com</span>
-          <button class="aqua" id="copy" type="button">Copy email</button>
+          <a class="aqua" href="mailto:purrcatstudio@gmail.com">Send email</a>
         </div>
         <div class="links" style="justify-content:center">
           <a class="mbtn" href="https://x.com/peaceofd0ve" target="_blank" rel="noopener">@peaceofd0ve on X <i class="ext" aria-hidden="true"></i></a>
@@ -935,6 +935,7 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
           <a class="mbtn" href="https://www.instagram.com/larapurrcat/" target="_blank" rel="noopener">Instagram <i class="ext" aria-hidden="true"></i></a>
           <a class="mbtn" href="https://purrcat.substack.com" target="_blank" rel="noopener">Substack <i class="ext" aria-hidden="true"></i></a>
           <a class="mbtn" href="https://github.com/purrcateth" target="_blank" rel="noopener">GitHub <i class="ext" aria-hidden="true"></i></a>
+          <a class="mbtn" href="https://www.are.na/lara-gulbuke-kinay" target="_blank" rel="noopener">Are.na <i class="ext" aria-hidden="true"></i></a>
           <a class="mbtn" href="https://purrcat.notion.site/" target="_blank" rel="noopener">CV <i class="ext" aria-hidden="true"></i></a>
         </div>
         <div class="signoff"><span>With love,</span><span class="sig">Purrcat</span></div>
@@ -1087,27 +1088,6 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
   } else {
     window.addEventListener('resize', redraw);
   }
-
-  /* Copy email */
-  const copyBtn = byId('copy');
-  const mail = byId('mail');
-  copyBtn.addEventListener('click', () => {
-    const text = mail.textContent.trim();
-    const done = (label) => { copyBtn.textContent = label; setTimeout(() => { copyBtn.textContent = 'Copy email'; }, 2200); };
-    const selectIt = () => {
-      const range = document.createRange();
-      range.selectNodeContents(mail);
-      const sel = window.getSelection();
-      sel.removeAllRanges();
-      sel.addRange(range);
-      done('Selected, copy it');
-    };
-    try {
-      navigator.clipboard.writeText(text).then(() => done('Copied'), selectIt);
-    } catch (e) {
-      selectIt();
-    }
-  });
 })();
 </script>
 

@@ -645,29 +645,158 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
 @media (max-width: 560px) { .stage { height: 340px; } }
 @media (max-width: 350px) { .legend { grid-template-columns: minmax(0, 1fr); } .stage { height: 430px; } }
 
-/* Lovebombing, opened inside the page */
+/* Lovebombing, live on a pink laptop */
 .take-note { margin: -6px 0 0; font-family: var(--font-chrome); font-size: 13px; color: var(--line); }
-dialog.appwin {
-  position: fixed;
-  inset: 0;
-  margin: auto;
-  padding: 0;
-  width: min(1100px, 94vw);
-  height: min(800px, 88vh);
-  max-width: none;
-  max-height: none;
-  overflow: hidden;
-  color: var(--text);
-  animation: none;
-}
-dialog.appwin[open] { display: flex; flex-direction: column; }
-dialog.appwin::backdrop { background: var(--veil); }
-.appwin iframe { flex: 1; display: block; width: 100%; min-height: 0; border: 0; background: var(--sky); }
-.appwin .sbar a { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; }
-.appwin .sbar a:hover { text-decoration: underline; }
 .closebtn { padding: 0; appearance: none; -webkit-appearance: none; }
 .closebtn:hover, .closebtn:focus-visible { background: var(--ink); }
-html:has(dialog.appwin[open]) { overflow: hidden; }
+.try { display: grid; justify-items: center; gap: clamp(14px, 2.4vw, 22px); margin-top: clamp(44px, 7vw, 76px); }
+.try-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 4px 12px 5px;
+  font-family: var(--font-chrome);
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--shade-soft);
+}
+.try-tag .hrt { margin-top: 0; }
+.laptop {
+  --bz: clamp(9px, 1.7vw, 18px);
+  --fr: clamp(4px, 0.75vw, 8px);
+  --chin: clamp(26px, 3.8vw, 38px);
+  --shell-hi: #FFDAF1;
+  --shell: #F8B4DC;
+  --shell-lo: #EC9BCB;
+  --shell-edge: #5A2148;
+  --glass: #2A1832;
+  position: relative;
+  justify-self: center;
+  width: min(calc(100vw - 2 * clamp(16px, 4vw, 40px)), 1300px, max(600px, calc(((100vh - 64px - var(--bz) - 2 * var(--fr) - var(--chin)) * 4 / 3 + 2 * (var(--bz) + var(--fr)) + 4px) * 1.08)));
+  margin: 0;
+}
+.lt-lid {
+  position: relative;
+  width: calc(100% / 1.08);
+  margin: 0 auto;
+  padding: var(--bz) var(--bz) 0;
+  background: linear-gradient(180deg, var(--shell-hi) 0%, var(--shell) 16%, var(--shell) 74%, var(--shell-lo) 100%);
+  border: 2px solid var(--shell-edge);
+  border-bottom: 0;
+  border-radius: clamp(14px, 2.4vw, 28px) clamp(14px, 2.4vw, 28px) 4px 4px;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.8), inset 2px 0 0 rgba(255, 255, 255, 0.35), inset -2px 0 0 rgba(150, 50, 110, 0.14);
+}
+.lt-slot { position: relative; }
+.lt-screen {
+  position: relative;
+  padding: var(--fr);
+  background: var(--glass);
+  border-radius: clamp(5px, 0.9vw, 10px);
+  box-shadow: 0 0 0 1px rgba(90, 33, 72, 0.45), 0 1px 0 1px rgba(255, 255, 255, 0.55);
+}
+.lt-fsbar { display: none; }
+.lt-view { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--sky); border-radius: 2px; }
+.lt-poster { position: absolute; inset: 0; display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; }
+.lt-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  transform-origin: 0 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+.lt-view.is-live .lt-frame { opacity: 1; pointer-events: auto; }
+.lt-vignette { position: absolute; inset: 0; z-index: 2; pointer-events: none; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.5), inset 0 0 22px rgba(30, 0, 40, 0.18); }
+.lt-status {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 3px 8px 4px;
+  font-family: var(--font-pixel);
+  font-size: 18px;
+  line-height: 1;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+.lt-status .caret { height: 14px; }
+.lt-tap { position: absolute; inset: 0; z-index: 4; display: none; place-items: center; width: 100%; padding: 0; border: 0; background: rgba(42, 24, 50, 0.16); }
+.laptop.is-small .lt-tap { display: grid; }
+.lt-tap .aqua { padding: 8px 22px; font-size: 15px; }
+.lt-chin { position: relative; display: flex; align-items: center; justify-content: center; gap: clamp(8px, 1.8vw, 18px); height: var(--chin); }
+.lt-grille { flex: 0 1 clamp(22px, 7vw, 84px); height: clamp(7px, 1.2vw, 13px); background: radial-gradient(circle, rgba(140, 50, 105, 0.55) 0 1.1px, transparent 1.6px) 0 0 / 6px 6px; }
+.lt-badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-chrome); font-size: clamp(10px, 1.35vw, 14px); letter-spacing: 0.08em; color: #8A3468; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7); white-space: nowrap; }
+.lt-badge img { display: block; width: 1.6em; height: auto; }
+.lt-fullbtn {
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: clamp(18px, 2.6vw, 24px);
+  padding: 0 clamp(6px, 1vw, 10px);
+  font-family: var(--font-chrome);
+  font-size: clamp(10px, 1.3vw, 13px);
+  color: #7A2E5C;
+  background: linear-gradient(180deg, #FFE6F4, #F3A8D3);
+  border: 1px solid #A85487;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85), 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.lt-fullbtn:hover { background: linear-gradient(180deg, #FFF3FA, #F8BBDE); }
+.lt-fullbtn:active { background: linear-gradient(180deg, #F3A8D3, #FFE6F4); box-shadow: inset 0 1px 2px rgba(120, 40, 90, 0.35); }
+.lt-fs-ico {
+  display: block;
+  flex: none;
+  width: 10px;
+  height: 10px;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 9' shape-rendering='crispEdges'%3E%3Cpath d='M0 0h3v1H1v2H0zM6 0h3v3H8V1H6zM0 6h1v2h2v1H0zM8 6h1v3H6V8h2z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 9' shape-rendering='crispEdges'%3E%3Cpath d='M0 0h3v1H1v2H0zM6 0h3v3H8V1H6zM0 6h1v2h2v1H0zM8 6h1v3H6V8h2z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+@media (max-width: 560px) { .lt-fullbtn span { display: none; } }
+.lt-deck { display: block; width: 100%; height: auto; margin-top: -1px; overflow: visible; }
+.lt-led { fill: #C77DAA; transition: fill 0.4s ease; }
+.lt-ledglow { opacity: 0; transition: opacity 0.4s ease; }
+.laptop.is-on .lt-led { fill: #FF4F9A; }
+.laptop.is-on .lt-ledglow { opacity: 1; }
+.try-cap {
+  margin: 10px auto 0;
+  max-width: 52ch;
+  padding: 8px 14px 9px;
+  font-family: var(--font-prose);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--prose);
+  text-align: center;
+  text-wrap: balance;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--shade-soft);
+}
+.try-links { justify-content: center; margin-top: 0; padding-top: 0; }
+.lt-screen.is-full { display: flex; flex-direction: column; padding: 0; border-radius: 0; background: var(--window); box-shadow: none; }
+.lt-screen.is-full .lt-fsbar { display: grid; flex: none; }
+.lt-screen.is-full .lt-view { flex: 1 1 auto; min-height: 0; aspect-ratio: auto; border-radius: 0; }
+.lt-screen.is-full .lt-vignette, .lt-screen.is-full .lt-tap { display: none; }
+.lt-screen.is-max { position: fixed; inset: 0; z-index: 60; padding-top: env(safe-area-inset-top, 0px); }
+html.lt-lock { overflow: hidden; }
 
 /* Windows settle in, already visible */
 @keyframes settle { from { transform: translateY(14px); } to { transform: none; } }
@@ -784,7 +913,7 @@ html:has(dialog.appwin[open]) { overflow: hidden; }
         <div class="lab" style="grid-row:3">V2</div>
         <div class="lane" style="grid-row:3">
           <a class="clip" href="#work" style="--s:20;--e:46;--tc:var(--hot)" data-s="20" data-e="46">Work</a>
-          <a class="clip" href="#lovebombing" style="--s:46;--e:60;--tc:var(--window)" data-s="46" data-e="60">App</a>
+          <a class="clip" href="#try-app" style="--s:46;--e:60;--tc:var(--window)" data-s="46" data-e="60">App</a>
         </div>
         <div class="lab" style="grid-row:4">V1</div>
         <div class="lane" style="grid-row:4">
@@ -945,13 +1074,68 @@ html:has(dialog.appwin[open]) { overflow: hidden; }
             <div><dt>Made with:</dt><dd>Claude Code and Figma</dd></div>
             <div><dt>Also:</dt><dd>An on-chain edition on Stellar, with tips and Folded Letter, an encrypted exquisite-corpse drawing game.</dd></div>
           </dl>
-          <a class="take" href="https://lovebombing.vercel.app/" target="_blank" rel="noopener" data-open-app><img src="assets/take-me-there.webp" alt="Take me there: open the Lovebombing app here" width="640" height="206"></a>
-          <p class="take-note">Opens the live app right here</p>
+          <a class="take" href="#try-app"><img src="assets/take-me-there.webp" alt="Take me there: try the live app below" width="640" height="206"></a>
+          <p class="take-note">Try the live app below</p>
           <a class="mbtn" href="https://github.com/purrcateth" target="_blank" rel="noopener">Code on GitHub <i class="ext" aria-hidden="true"></i></a>
         </div>
         <div class="sbar"><span>lovebombing.vercel.app</span><span>v1 live</span></div>
       </section>
     </div>
+
+    <section class="try" aria-labelledby="h-try">
+      <h2 class="try-tag" id="h-try"><i class="hrt" aria-hidden="true"></i>Try the live app</h2>
+      <figure class="laptop" id="try-app">
+        <div class="lt-lid">
+          <div class="lt-slot" id="lt-slot">
+          <div class="lt-screen" id="lt-screen">
+            <div class="tbar lt-fsbar"><button class="box closebtn" type="button" id="lt-exit" aria-label="Exit full screen"></button><span>Lovebombing</span><i class="box ghost" aria-hidden="true"></i></div>
+            <div class="lt-view" id="lt-view">
+              <img class="lt-poster" src="assets/lovebombing-screen.webp" alt="The Lovebombing welcome page" width="960" height="720" loading="lazy" decoding="async">
+              <iframe class="lt-frame" id="lt-frame" title="Lovebombing, the live app" allow="clipboard-write; autoplay; fullscreen"></iframe>
+              <i class="lt-vignette" aria-hidden="true"></i>
+              <p class="lt-status" id="lt-status" hidden>Loading the app<span class="caret" aria-hidden="true"></span></p>
+              <button class="lt-tap" id="lt-tap" type="button"><span class="aqua">Tap to open the app</span></button>
+            </div>
+          </div>
+          </div>
+          <div class="lt-chin">
+            <i class="lt-grille" aria-hidden="true"></i>
+            <span class="lt-badge"><img src="assets/flower.webp" alt="" width="520" height="512">LOVEBOMBING, INC</span>
+            <i class="lt-grille" aria-hidden="true"></i>
+            <button class="lt-fullbtn" id="lt-full" type="button" aria-label="Full screen"><i class="lt-fs-ico" aria-hidden="true"></i><span>Full screen</span></button>
+          </div>
+        </div>
+        <svg class="lt-deck" viewBox="0 0 1080 142" width="1080" height="142" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="lt-g-top" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3A6D3"/><stop offset="1" stop-color="#FCC8E7"/></linearGradient>
+              <linearGradient id="lt-g-lip" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EA98C7"/><stop offset="1" stop-color="#C46B9C"/></linearGradient>
+              <linearGradient id="lt-g-hinge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9729F"/><stop offset="1" stop-color="#EFA3CF"/></linearGradient>
+              <filter id="lt-f-shadow" filterUnits="userSpaceOnUse" x="-40" y="88" width="1160" height="80"><feGaussianBlur stdDeviation="5"/></filter>
+              <filter id="lt-f-glow" filterUnits="userSpaceOnUse" x="880" y="88" width="120" height="60"><feGaussianBlur stdDeviation="3"/></filter>
+            </defs>
+            <ellipse cx="540" cy="126" rx="525" ry="8" fill="rgba(40, 10, 60, 0.32)" filter="url(#lt-f-shadow)"/>
+            <path d="M40 0L1040 0L1078.4 104.0Q1080.0 108.0 1080.0 112.0L1080.0 115.0Q1080.0 124.0 1071.0 124.0L9 124.0Q0 124.0 0 115.0L0 112.0Q0 108.0 1.6 104.0Z" fill="url(#lt-g-lip)"/>
+            <path d="M40.0 -0.0L1040.0 -0.0L1080.0 108.0L0.0 108.0Z" fill="url(#lt-g-top)"/>
+            <path d="M0 108.0L1080 108.0" stroke="#FFE2F3" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+            <path d="M52.0 -0.0L1028.0 -0.0L1029.8 5.0L50.2 5.0Z" fill="url(#lt-g-hinge)"/>
+            <path d="M107.3 8.6L972.7 8.6L990.0 62.8L90.0 62.8Z" fill="#E393C2" stroke="#C86FA3" stroke-width="1" vector-effect="non-scaling-stroke"/>
+            <path d="M121.7 12.2L169.6 12.2L169.6 14.6L121.7 14.6ZM178.0 12.2L225.9 12.2L225.9 14.6L178.0 14.6ZM234.4 12.2L282.3 12.2L282.3 14.6L234.4 14.6ZM290.7 12.2L338.6 12.2L338.6 14.6L290.7 14.6ZM347.0 12.2L394.9 12.2L394.9 14.6L347.0 14.6ZM403.4 12.2L451.3 12.2L451.3 14.6L403.4 14.6ZM459.7 12.2L507.6 12.2L507.6 14.6L459.7 14.6ZM516.1 12.2L563.9 12.2L563.9 14.6L516.1 14.6ZM572.4 12.2L620.3 12.2L620.3 14.6L572.4 14.6ZM628.7 12.2L676.6 12.2L676.6 14.6L628.7 14.6ZM685.1 12.2L733.0 12.2L733.0 14.6L685.1 14.6ZM741.4 12.2L789.3 12.2L789.3 14.6L741.4 14.6ZM797.7 12.2L845.6 12.2L845.6 14.6L797.7 14.6ZM854.1 12.2L902.0 12.2L902.0 14.6L854.1 14.6ZM910.4 12.2L958.3 12.2L958.3 14.6L910.4 14.6ZM119.0 21.1L167.2 21.1L167.2 23.5L119.0 23.5ZM175.7 21.1L223.9 21.1L223.9 23.5L175.7 23.5ZM232.4 21.1L280.6 21.1L280.6 23.5L232.4 23.5ZM289.1 21.1L337.3 21.1L337.3 23.5L289.1 23.5ZM345.8 21.1L394.0 21.1L394.0 23.5L345.8 23.5ZM402.5 21.1L450.7 21.1L450.7 23.5L402.5 23.5ZM459.2 21.1L507.4 21.1L507.4 23.5L459.2 23.5ZM515.9 21.1L564.1 21.1L564.1 23.5L515.9 23.5ZM572.6 21.1L620.8 21.1L620.8 23.5L572.6 23.5ZM629.3 21.1L677.5 21.1L677.5 23.5L629.3 23.5ZM686.0 21.1L734.2 21.1L734.2 23.5L686.0 23.5ZM742.7 21.1L790.9 21.1L790.9 23.5L742.7 23.5ZM799.4 21.1L847.6 21.1L847.6 23.5L799.4 23.5ZM856.1 21.1L961.0 21.1L961.0 23.5L856.1 23.5ZM116.2 30.1L193.3 30.1L193.3 32.5L116.2 32.5ZM201.8 30.1L250.3 30.1L250.3 32.5L201.8 32.5ZM258.9 30.1L307.4 30.1L307.4 32.5L258.9 32.5ZM316.0 30.1L364.5 30.1L364.5 32.5L316.0 32.5ZM373.0 30.1L421.6 30.1L421.6 32.5L373.0 32.5ZM430.1 30.1L478.6 30.1L478.6 32.5L430.1 32.5ZM487.2 30.1L535.7 30.1L535.7 32.5L487.2 32.5ZM544.3 30.1L592.8 30.1L592.8 32.5L544.3 32.5ZM601.4 30.1L649.9 30.1L649.9 32.5L601.4 32.5ZM658.4 30.1L707.0 30.1L707.0 32.5L658.4 32.5ZM715.5 30.1L764.0 30.1L764.0 32.5L715.5 32.5ZM772.6 30.1L821.1 30.1L821.1 32.5L772.6 32.5ZM829.7 30.1L878.2 30.1L878.2 32.5L829.7 32.5ZM886.7 30.1L963.8 30.1L963.8 32.5L886.7 32.5ZM113.4 39.3L205.3 39.3L205.3 41.7L113.4 41.7ZM213.9 39.3L262.8 39.3L262.8 41.7L213.9 41.7ZM271.4 39.3L320.2 39.3L320.2 41.7L271.4 41.7ZM328.9 39.3L377.7 39.3L377.7 41.7L328.9 41.7ZM386.3 39.3L435.1 39.3L435.1 41.7L386.3 41.7ZM443.8 39.3L492.6 39.3L492.6 41.7L443.8 41.7ZM501.2 39.3L550.1 39.3L550.1 41.7L501.2 41.7ZM558.7 39.3L607.5 39.3L607.5 41.7L558.7 41.7ZM616.1 39.3L665.0 39.3L665.0 41.7L616.1 41.7ZM673.6 39.3L722.4 39.3L722.4 41.7L673.6 41.7ZM731.0 39.3L779.9 39.3L779.9 41.7L731.0 41.7ZM788.5 39.3L837.3 39.3L837.3 41.7L788.5 41.7ZM110.6 48.6L232.0 48.6L232.0 51.0L110.6 51.0ZM240.7 48.6L289.9 48.6L289.9 51.0L240.7 51.0ZM298.5 48.6L347.7 48.6L347.7 51.0L298.5 51.0ZM356.4 48.6L405.5 48.6L405.5 51.0L356.4 51.0ZM414.2 48.6L463.4 48.6L463.4 51.0L414.2 51.0ZM472.0 48.6L521.2 48.6L521.2 51.0L472.0 51.0ZM529.9 48.6L579.0 48.6L579.0 51.0L529.9 51.0ZM587.7 48.6L636.9 48.6L636.9 51.0L587.7 51.0ZM645.6 48.6L694.7 48.6L694.7 51.0L645.6 51.0ZM703.4 48.6L752.6 48.6L752.6 51.0L703.4 51.0ZM761.2 48.6L810.4 48.6L810.4 51.0L761.2 51.0ZM819.1 48.6L969.4 48.6L969.4 51.0L819.1 51.0ZM107.7 57.9L157.2 57.9L157.2 60.3L107.7 60.3ZM165.9 57.9L215.4 57.9L215.4 60.3L165.9 60.3ZM224.1 57.9L288.2 57.9L288.2 60.3L224.1 60.3ZM296.9 57.9L375.5 57.9L375.5 60.3L296.9 60.3ZM384.2 57.9L652.1 57.9L652.1 60.3L384.2 60.3ZM660.8 57.9L739.4 57.9L739.4 60.3L660.8 60.3ZM748.2 57.9L797.6 57.9L797.6 60.3L748.2 60.3ZM806.4 57.9L855.9 57.9L855.9 60.3L806.4 60.3ZM864.6 57.9L914.1 57.9L914.1 60.3L864.6 60.3ZM922.8 57.9L972.3 57.9L972.3 60.3L922.8 60.3Z" fill="#DD96C2"/>
+            <path d="M122.9 8.4L170.6 8.4L169.6 12.2L121.7 12.2ZM179.0 8.4L226.8 8.4L225.9 12.2L178.0 12.2ZM235.2 8.4L283.0 8.4L282.3 12.2L234.4 12.2ZM291.4 8.4L339.2 8.4L338.6 12.2L290.7 12.2ZM347.6 8.4L395.3 8.4L394.9 12.2L347.0 12.2ZM403.8 8.4L451.5 8.4L451.3 12.2L403.4 12.2ZM459.9 8.4L507.7 8.4L507.6 12.2L459.7 12.2ZM516.1 8.4L563.9 8.4L563.9 12.2L516.1 12.2ZM572.3 8.4L620.1 8.4L620.3 12.2L572.4 12.2ZM628.5 8.4L676.2 8.4L676.6 12.2L628.7 12.2ZM684.7 8.4L732.4 8.4L733.0 12.2L685.1 12.2ZM740.8 8.4L788.6 8.4L789.3 12.2L741.4 12.2ZM797.0 8.4L844.8 8.4L845.6 12.2L797.7 12.2ZM853.2 8.4L901.0 8.4L902.0 12.2L854.1 12.2ZM909.4 8.4L957.1 8.4L958.3 12.2L910.4 12.2ZM121.2 13.7L169.2 13.7L167.2 21.1L119.0 21.1ZM177.6 13.7L225.6 13.7L223.9 21.1L175.7 21.1ZM234.0 13.7L282.0 13.7L280.6 21.1L232.4 21.1ZM290.4 13.7L338.4 13.7L337.3 21.1L289.1 21.1ZM346.8 13.7L394.8 13.7L394.0 21.1L345.8 21.1ZM403.2 13.7L451.2 13.7L450.7 21.1L402.5 21.1ZM459.6 13.7L507.6 13.7L507.4 21.1L459.2 21.1ZM516.0 13.7L564.0 13.7L564.1 21.1L515.9 21.1ZM572.4 13.7L620.4 13.7L620.8 21.1L572.6 21.1ZM628.8 13.7L676.8 13.7L677.5 21.1L629.3 21.1ZM685.2 13.7L733.2 13.7L734.2 21.1L686.0 21.1ZM741.6 13.7L789.6 13.7L790.9 21.1L742.7 21.1ZM798.0 13.7L846.0 13.7L847.6 21.1L799.4 21.1ZM854.4 13.7L958.8 13.7L961.0 21.1L856.1 21.1ZM118.5 22.6L195.1 22.6L193.3 30.1L116.2 30.1ZM203.7 22.6L251.9 22.6L250.3 30.1L201.8 30.1ZM260.4 22.6L308.7 22.6L307.4 30.1L258.9 30.1ZM317.2 22.6L365.4 22.6L364.5 30.1L316.0 30.1ZM374.0 22.6L422.2 22.6L421.6 30.1L373.0 30.1ZM430.7 22.6L479.0 22.6L478.6 30.1L430.1 30.1ZM487.5 22.6L535.7 22.6L535.7 30.1L487.2 30.1ZM544.3 22.6L592.5 22.6L592.8 30.1L544.3 30.1ZM601.0 22.6L649.3 22.6L649.9 30.1L601.4 30.1ZM657.8 22.6L706.0 22.6L707.0 30.1L658.4 30.1ZM714.6 22.6L762.8 22.6L764.0 30.1L715.5 30.1ZM771.3 22.6L819.6 22.6L821.1 30.1L772.6 30.1ZM828.1 22.6L876.3 22.6L878.2 30.1L829.7 30.1ZM884.9 22.6L961.5 22.6L963.8 30.1L886.7 30.1ZM115.7 31.7L207.2 31.7L205.3 39.3L113.4 39.3ZM215.7 31.7L264.3 31.7L262.8 39.3L213.9 39.3ZM272.9 31.7L321.4 31.7L320.2 39.3L271.4 39.3ZM330.0 31.7L378.6 31.7L377.7 39.3L328.9 39.3ZM387.1 31.7L435.7 31.7L435.1 39.3L386.3 39.3ZM444.3 31.7L492.9 31.7L492.6 39.3L443.8 39.3ZM501.4 31.7L550.0 31.7L550.1 39.3L501.2 39.3ZM558.6 31.7L607.1 31.7L607.5 39.3L558.7 39.3ZM615.7 31.7L664.3 31.7L665.0 39.3L616.1 39.3ZM672.9 31.7L721.4 31.7L722.4 39.3L673.6 39.3ZM730.0 31.7L778.6 31.7L779.9 39.3L731.0 39.3ZM787.1 31.7L835.7 31.7L837.3 39.3L788.5 39.3ZM112.9 40.9L233.7 40.9L232.0 48.6L110.6 48.6ZM242.3 40.9L291.2 40.9L289.9 48.6L240.7 48.6ZM299.9 40.9L348.7 40.9L347.7 48.6L298.5 48.6ZM357.4 40.9L406.3 40.9L405.5 48.6L356.4 48.6ZM414.9 40.9L463.8 40.9L463.4 48.6L414.2 48.6ZM472.4 40.9L521.3 40.9L521.2 48.6L472.0 48.6ZM529.9 40.9L578.8 40.9L579.0 48.6L529.9 48.6ZM587.5 40.9L636.3 40.9L636.9 48.6L587.7 48.6ZM645.0 40.9L693.9 40.9L694.7 48.6L645.6 48.6ZM702.5 40.9L751.4 40.9L752.6 48.6L703.4 48.6ZM760.0 40.9L808.9 40.9L810.4 48.6L761.2 48.6ZM817.5 40.9L967.1 40.9L969.4 48.6L819.1 48.6ZM110.1 50.1L159.3 50.1L157.2 57.9L107.7 57.9ZM168.0 50.1L217.2 50.1L215.4 57.9L165.9 57.9ZM225.9 50.1L289.6 50.1L288.2 57.9L224.1 57.9ZM298.3 50.1L376.4 50.1L375.5 57.9L296.9 57.9ZM385.1 50.1L651.5 50.1L652.1 57.9L384.2 57.9ZM660.1 50.1L738.3 50.1L739.4 57.9L660.8 57.9ZM747.0 50.1L796.2 50.1L797.6 57.9L748.2 57.9ZM804.9 50.1L854.1 50.1L855.9 57.9L806.4 57.9ZM862.8 50.1L912.0 50.1L914.1 57.9L864.6 57.9ZM920.7 50.1L969.9 50.1L972.3 57.9L922.8 57.9Z" fill="#FFF0F9" stroke="#FFF0F9" stroke-width="0.8" stroke-linejoin="round"/>
+            <path d="M845.9 39.3L966.6 39.3L966.6 41.7L845.9 41.7Z" fill="#D9558F"/>
+            <path d="M844.3 31.7L964.3 31.7L966.6 39.3L845.9 39.3Z" fill="#FF7FB2" stroke="#FF7FB2" stroke-width="0.8" stroke-linejoin="round"/>
+            <path d="M419.1 68.8L660.9 68.8L662.8 91.6L417.2 91.6Z" fill="#F0A2CE" stroke="#D17CAF" stroke-width="1" vector-effect="non-scaling-stroke"/>
+            <path d="M417.2 92.8L662.8 92.8" stroke="#FFD9EE" stroke-width="1" vector-effect="non-scaling-stroke"/>
+            <path d="M432.4 100.6L647.6 100.6L647.6 102.2L432.4 102.2Z" fill="#C9709F"/>
+            <path d="M433.0 93.1L647.0 93.1L647.6 100.6L432.4 100.6Z" fill="#EDA0CB" stroke="#C9709F" stroke-width="1" vector-effect="non-scaling-stroke"/>
+            <path d="M494 108.0Q540 121.0 586 108.0Z" fill="#B45B8C" opacity="0.5"/>
+            <ellipse class="lt-ledglow" cx="938" cy="116.0" rx="18" ry="7" fill="#FF6B9D" filter="url(#lt-f-glow)"/>
+            <rect class="lt-led" x="930" y="114.0" width="16" height="4" rx="2"/>
+            <path d="M40 0L1040 0L1078.4 104.0Q1080.0 108.0 1080.0 112.0L1080.0 115.0Q1080.0 124.0 1071.0 124.0L9 124.0Q0 124.0 0 115.0L0 112.0Q0 108.0 1.6 104.0Z" fill="none" stroke="#5A2148" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+          </svg>
+        <figcaption class="try-cap">This is the real Lovebombing app, running right here. Type a name, press Take me there and make a lovebomb.</figcaption>
+      </figure>
+      <div class="links try-links"><a class="mbtn" href="https://lovebombing.vercel.app/" target="_blank" rel="noopener">Open in a new tab <i class="ext" aria-hidden="true"></i></a></div>
+    </section>
 
     <section class="win sec" id="writing" aria-labelledby="h-writing">
       <div class="tbar" aria-hidden="true"><i class="box"></i><span>Purrcat Purring</span><i class="box ghost"></i></div>
@@ -1043,11 +1227,6 @@ html:has(dialog.appwin[open]) { overflow: hidden; }
   <a href="https://purrcat.studio" target="_blank" rel="noopener">purrcat.studio</a>
 </footer>
 
-<dialog class="win appwin" id="appwin" aria-labelledby="appwin-title">
-  <div class="tbar"><button class="box closebtn" type="button" id="appwin-close" aria-label="Close the Lovebombing app"></button><span id="appwin-title">Lovebombing</span><i class="box ghost" aria-hidden="true"></i></div>
-  <iframe id="appframe" title="Lovebombing app" src="about:blank" allow="clipboard-write; autoplay; fullscreen"></iframe>
-  <div class="sbar"><span>lovebombing.vercel.app</span><a href="https://lovebombing.vercel.app/" target="_blank" rel="noopener">Open in a new tab <i class="ext" aria-hidden="true"></i></a></div>
-</dialog>
 
 <script>
 (() => {
@@ -1405,20 +1584,109 @@ html:has(dialog.appwin[open]) { overflow: hidden; }
     else window.addEventListener('resize', size);
   })();
 
-  /* Lovebombing, opened in a window inside the page */
+  /* Lovebombing, live on the laptop */
   (() => {
-    const dlg = byId('appwin');
-    const frame = byId('appframe');
-    if (!dlg || !frame || typeof dlg.showModal !== 'function') return;
+    const lap = byId('try-app');
+    const scr = byId('lt-screen');
+    const view = byId('lt-view');
+    const frame = byId('lt-frame');
+    const status = byId('lt-status');
+    if (!lap || !scr || !view || !frame) return;
+    const slot = byId('lt-slot');
     const APP = 'https://lovebombing.vercel.app/';
-    document.querySelectorAll('[data-open-app]').forEach((a) => a.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (frame.getAttribute('src') !== APP) frame.setAttribute('src', APP);
-      dlg.showModal();
-    }));
-    byId('appwin-close').addEventListener('click', () => dlg.close());
-    dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
-    dlg.addEventListener('close', () => frame.setAttribute('src', 'about:blank'));
+    const VW = 1040, VH = 780, SMALL = 520;
+    const conn = navigator.connection || {};
+    const light = !!conn.saveData || /2g|3g/.test(conn.effectiveType || '');
+    let started = false, live = false, maxed = false;
+
+    const fsEl = () => document.fullscreenElement || document.webkitFullscreenElement || null;
+    const isFull = () => maxed || fsEl() === scr;
+
+    // The app is drawn for a desktop window, so the screen shows it at 1040 x 780 and scales it down to fit.
+    // Full screen on a phone gives the app its own small-screen layout instead.
+    const fit = () => {
+      const w = view.clientWidth, h = view.clientHeight;
+      if (!w || !h) return;
+      const full = isFull();
+      const s = full && w < 700 ? 1 : Math.min(1, w / VW, h / VH);
+      frame.style.width = w / s + 'px';
+      frame.style.height = h / s + 'px';
+      frame.style.transform = s < 1 ? 'scale(' + s + ')' : '';
+      lap.classList.toggle('is-small', !full && w < SMALL);
+    };
+
+    const reveal = () => {
+      if (live) return;
+      live = true;
+      view.classList.add('is-live');
+      lap.classList.add('is-on');
+      status.hidden = true;
+    };
+    const start = () => {
+      if (started) return;
+      started = true;
+      status.hidden = false;
+      frame.addEventListener('load', reveal, { once: true });
+      frame.setAttribute('src', APP);
+      setTimeout(reveal, 8000);
+    };
+
+    // While the screen is out of the page, its slot keeps the space so the page does not jump.
+    const hold = (on) => { slot.style.height = on ? slot.offsetHeight + 'px' : ''; };
+    const sync = () => {
+      const full = isFull();
+      scr.classList.toggle('is-full', full);
+      if (!full) hold(false);
+      fit();
+    };
+    const maximize = (on) => {
+      if (on && !slot.style.height) hold(true);
+      maxed = on;
+      scr.classList.toggle('is-max', on);
+      document.documentElement.classList.toggle('lt-lock', on);
+      sync();
+    };
+    const enter = () => {
+      start();
+      if (isFull()) return;
+      hold(true);
+      const req = scr.requestFullscreen || scr.webkitRequestFullscreen;
+      if (!req) { maximize(true); return; }
+      try {
+        const p = req.call(scr);
+        if (p && typeof p.catch === 'function') p.catch(() => maximize(true));
+      } catch (err) {
+        maximize(true);
+      }
+    };
+    const leave = () => {
+      if (maxed) { maximize(false); return; }
+      const ex = document.exitFullscreen || document.webkitExitFullscreen;
+      if (fsEl() && ex) ex.call(document);
+    };
+
+    byId('lt-full').addEventListener('click', enter);
+    byId('lt-tap').addEventListener('click', enter);
+    byId('lt-exit').addEventListener('click', leave);
+    document.addEventListener('fullscreenchange', sync);
+    document.addEventListener('webkitfullscreenchange', sync);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && maxed) maximize(false); });
+
+    fit();
+    if ('ResizeObserver' in window) new ResizeObserver(fit).observe(view);
+    else window.addEventListener('resize', fit);
+
+    // Wake the app when the laptop comes near the screen, on screens big enough to use it in place.
+    if (!light) {
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          if (entries.some((en) => en.isIntersecting) && view.clientWidth >= SMALL) { start(); io.disconnect(); }
+        }, { rootMargin: '300px 0px' });
+        io.observe(lap);
+      } else if (view.clientWidth >= SMALL) {
+        start();
+      }
+    }
   })();
 })();
 </script>

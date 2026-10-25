@@ -147,7 +147,7 @@ img { max-width: 100%; }
   font-variant-numeric: tabular-nums;
 }
 @media (max-width: 760px) { .mb-clock { display: none; } }
-@media (max-width: 480px) { .mb-hide-sm { display: none; } .menubar a { padding: 4px 6px; } }
+@media (max-width: 480px) { .mb-hide-sm { display: none; } .menubar-in { font-size: 14px; } .menubar a { padding: 4px 5px; } }
 
 /* Windows, from the Lovebombing app */
 .win {
@@ -435,7 +435,8 @@ img { max-width: 100%; }
 .sec-intro { margin: 0; max-width: 60ch; font-family: var(--font-prose); font-size: 17px; line-height: 1.75; color: var(--prose); }
 
 .grid { display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr); }
-@media (min-width: 760px) { .grid.c2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 760px) { .grid.c2, .grid.c3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .grid.c3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 .card {
   display: flex;
@@ -619,10 +620,10 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
     <a class="mb-logo" href="#top" aria-label="Back to top"><img src="assets/flower.webp" alt="" width="520" height="512"></a>
     <div class="mb-items">
       <a class="mb-hide-sm" href="#top">Purrcat</a>
-      <a href="#writing">Writing</a>
-      <a href="#shorts">Shorts</a>
-      <a class="mb-hide-sm" href="#shows">Shows</a>
+      <a href="#shows">Shows</a>
+      <a href="#work">Work</a>
       <a href="#lovebombing">Lovebombing</a>
+      <a href="#writing">Writing</a>
       <a class="mb-hide-sm" href="#method">Method</a>
       <a href="#contact">Contact</a>
     </div>
@@ -636,15 +637,15 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
   <div class="hero wrap">
     <div class="hero-grid">
       <section class="win win-hero" aria-labelledby="h-top">
-        <div class="tbar" aria-hidden="true"><i class="box"></i><span>Purrcat Reel</span><i class="box ghost"></i></div>
+        <div class="tbar" aria-hidden="true"><i class="box"></i><span>Hi!! &lt;3</span><i class="box ghost"></i></div>
         <div class="hero-body">
           <img class="sticker" src="assets/flower.webp" alt="" width="520" height="512">
           <h1 class="wordmark" id="h-top">Purrcat</h1>
           <p class="who">Lara / creative technologist / Istanbul</p>
           <p class="headline">I make the posts, videos and communities people actually show up for.</p>
-          <p class="lede">I’ve been a social media manager and lead in crypto since 2024, starting at Seed Club and then at teams like Dora, writing the posts, making the designs and building brand assets. In 2025 I started making video too: livestreams, shorts and two podcasts. Along the way I built my own community, Lovebombing, INC, which started as a group chat in December 2024 and grew into X Spaces, a weekly show and IRL events. Now I’m taking all of it into AI.</p>
+          <p class="lede">I’ve been a social media manager and lead in crypto since 2024, starting at Seed Club and then at teams like Dora, writing the posts, making the designs and building brand assets. In 2025 I started making video too: livestreams, shorts and two podcasts. Along the way I built my own community, Lovebombing, INC, which started as a group chat in December 2024 and grew into X Spaces, livestreams and IRL events. Now I’m taking all of it into AI.</p>
           <div class="actions">
-            <a class="aqua" href="#writing">See my work</a>
+            <a class="aqua" href="#shows">See my work</a>
             <a class="mbtn" href="#contact">Get in touch</a>
           </div>
         </div>
@@ -679,32 +680,32 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
           <span class="tick" style="--x:66.6667" aria-hidden="true">00:40</span>
           <span class="tick minor" style="--x:83.3333" aria-hidden="true">00:50</span>
           <span class="tick last" style="--x:100" aria-hidden="true">01:00</span>
-          <a class="mark" href="#method" style="--x:18" aria-label="Moment marker: how I work"></a>
-          <a class="mark" href="#method" style="--x:50" aria-label="Moment marker: how I work"></a>
-          <a class="mark" href="#method" style="--x:78" aria-label="Moment marker: how I work"></a>
+          <a class="mark" href="#method" style="--x:30" aria-label="Moment marker: how I work"></a>
+          <a class="mark" href="#method" style="--x:52" aria-label="Moment marker: how I work"></a>
+          <a class="mark" href="#method" style="--x:76" aria-label="Moment marker: how I work"></a>
         </div>
 
         <div class="lab" style="grid-row:2">T1</div>
         <div class="lane" style="grid-row:2">
-          <a class="clip dark" href="#writing" style="--s:6;--e:28;--tc:var(--navy)" data-s="6" data-e="28">Writing</a>
+          <a class="clip dark" href="#writing" style="--s:60;--e:74;--tc:var(--navy)" data-s="60" data-e="74">Writing</a>
         </div>
         <div class="lab" style="grid-row:3">V2</div>
         <div class="lane" style="grid-row:3">
-          <a class="clip" href="#shorts" style="--s:26;--e:42;--tc:var(--hot)" data-s="26" data-e="42">Shorts</a>
-          <a class="clip" href="#lovebombing" style="--s:58;--e:74;--tc:var(--window)" data-s="58" data-e="74">App</a>
+          <a class="clip" href="#work" style="--s:20;--e:46;--tc:var(--hot)" data-s="20" data-e="46">Work</a>
+          <a class="clip" href="#lovebombing" style="--s:46;--e:60;--tc:var(--window)" data-s="46" data-e="60">App</a>
         </div>
         <div class="lab" style="grid-row:4">V1</div>
         <div class="lane" style="grid-row:4">
-          <a class="clip" href="#shows" style="--s:40;--e:56;--tc:var(--steel)" data-s="40" data-e="56">Shows</a>
-          <a class="clip" href="#offline" style="--s:82;--e:96;--tc:var(--mac-silver)" data-s="82" data-e="96">IRL</a>
+          <a class="clip" href="#shows" style="--s:6;--e:22;--tc:var(--steel)" data-s="6" data-e="22">Shows</a>
+          <a class="clip" href="#offline" style="--s:80;--e:94;--tc:var(--mac-silver)" data-s="80" data-e="94">IRL</a>
         </div>
         <div class="lab" style="grid-row:5">A1</div>
         <div class="lane" style="grid-row:5">
-          <a class="clip" href="#shows" style="--s:42;--e:58;--tc:var(--sky)" data-s="42" data-e="58">Podcasts</a>
+          <a class="clip" href="#shows" style="--s:8;--e:24;--tc:var(--sky)" data-s="8" data-e="24">Podcasts</a>
         </div>
         <div class="lab" style="grid-row:6">A2</div>
         <div class="lane" style="grid-row:6">
-          <a class="clip" href="#lovebombing" style="--s:54;--e:72;--tc:var(--window)" data-s="54" data-e="72">Spaces</a>
+          <a class="clip" href="#lovebombing" style="--s:44;--e:60;--tc:var(--window)" data-s="44" data-e="60">Spaces</a>
         </div>
 
         <div class="overlay" aria-hidden="true"><div class="playhead" id="playhead"></div></div>
@@ -714,6 +715,150 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
   </div>
 
   <div class="wrap">
+    <section class="win sec" id="shows" aria-labelledby="h-shows">
+      <div class="tbar" aria-hidden="true"><i class="box"></i><span>Shows</span><i class="box ghost"></i></div>
+      <div class="sec-body">
+        <header class="sec-head">
+          <h2 id="h-shows">My shows and podcasts</h2>
+          <p class="sec-intro">Long-form I host, write and produce.</p>
+        </header>
+        <div class="grid c2">
+          <article class="card" style="--tc: var(--steel)">
+            <div class="strip"><canvas class="film" data-seed="little-big-market" aria-hidden="true"></canvas><span class="handle">Weekly interviews</span></div>
+            <div class="card-body">
+              <h3>Little Big Market</h3>
+              <p class="role">Host, producer</p>
+              <p class="desc">Interviews with creators, founders and industry leaders about community building, trust and reputation systems in crypto. It began as my weekly interview series at Fluent, and I kept it going on my own under a new name and brand. Guests include Keewy founder Marianne, artist Grizz, Jessy Fries and Regan.</p>
+              <div class="links">
+                <a class="mbtn" href="https://open.spotify.com/show/1JHrky0schKJAeYH54oHgu" target="_blank" rel="noopener">Spotify <i class="ext" aria-hidden="true"></i></a>
+                <a class="mbtn" href="https://podcasts.apple.com/tr/podcast/little-big-market/id1884743011" target="_blank" rel="noopener">Apple Podcasts <i class="ext" aria-hidden="true"></i></a>
+                <a class="mbtn" href="https://www.youtube.com/@PurrcatLara/videos" target="_blank" rel="noopener">YouTube <i class="ext" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+          <article class="card" style="--tc: var(--steel)">
+            <div class="strip"><canvas class="film" data-seed="the-overflow" aria-hidden="true"></canvas><span class="handle">Personal podcast</span></div>
+            <div class="card-body">
+              <h3>The Overflow by Purrcat</h3>
+              <p class="role">Host, writer, editor</p>
+              <p class="desc">My personal podcast, where I talk about my revelations and my life as it happens. New episodes come out whenever the cup overflows.</p>
+              <div class="links">
+                <a class="mbtn" href="https://open.spotify.com/show/6qE1unGS9MERSP3Iz1I9v0" target="_blank" rel="noopener">Spotify <i class="ext" aria-hidden="true"></i></a>
+                <a class="mbtn" href="https://podcasts.apple.com/tr/podcast/the-overflow-by-purrcat/id1882866590" target="_blank" rel="noopener">Apple Podcasts <i class="ext" aria-hidden="true"></i></a>
+                <a class="mbtn" href="https://www.youtube.com/@PurrcatLara/videos" target="_blank" rel="noopener">YouTube <i class="ext" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="sbar"><span>2 shows</span><span>Tracks V1, A1</span></div>
+    </section>
+
+    <section class="win sec" id="work" aria-labelledby="h-work">
+      <div class="tbar" aria-hidden="true"><i class="box"></i><span>Footprint</span><i class="box ghost"></i></div>
+      <div class="sec-body">
+        <header class="sec-head">
+          <h2 id="h-work">Proof of work</h2>
+          <p class="sec-intro">My digital footprint as a content creator and community builder in crypto, from the brand accounts I ran to the shows I hosted.</p>
+        </header>
+        <div class="grid c3">
+          <article class="card" style="--tc: var(--hot)">
+            <div class="strip"><canvas class="film" data-seed="internet-explorers" aria-hidden="true"></canvas><span class="handle">@intrntexplorers</span></div>
+            <div class="card-body">
+              <h3>Internet Explorers by Seed Club</h3>
+              <p class="role">Visual content</p>
+              <p class="desc">I helped create the visual content for Seed Club’s livestream series, with guidance from my creative lead.</p>
+              <div class="links"><a class="mbtn" href="https://x.com/intrntexplorers" target="_blank" rel="noopener">See it on X <i class="ext" aria-hidden="true"></i></a></div>
+            </div>
+          </article>
+          <article class="card" style="--tc: var(--hot)">
+            <div class="strip"><canvas class="film" data-seed="search-on-dora" aria-hidden="true"></canvas><span class="handle">@SearchOnDora</span></div>
+            <div class="card-body">
+              <h3>Dora</h3>
+              <p class="role">Content and graphic design</p>
+              <p class="desc">I made all of Dora’s content and graphic design, from the posts to the visuals and brand assets.</p>
+              <div class="links"><a class="mbtn" href="https://x.com/SearchOnDora" target="_blank" rel="noopener">See it on X <i class="ext" aria-hidden="true"></i></a></div>
+            </div>
+          </article>
+          <article class="card" style="--tc: var(--hot)">
+            <div class="strip"><canvas class="film" data-seed="fluent-interviews" aria-hidden="true"></canvas><span class="handle">@fluent_eco</span></div>
+            <div class="card-body">
+              <h3>Fluent</h3>
+              <p class="role">Host, weekly interviews</p>
+              <p class="desc">I hosted weekly interviews about reputation and trust in the industry. Later I kept them going on my own as Little Big Market.</p>
+              <div class="links"><a class="mbtn" href="https://x.com/fluent_eco" target="_blank" rel="noopener">See it on X <i class="ext" aria-hidden="true"></i></a></div>
+            </div>
+          </article>
+          <article class="card" style="--tc: var(--hot)">
+            <div class="strip"><canvas class="film" data-seed="lovebombing-shorts" aria-hidden="true"></canvas><span class="handle">@LovebombingINC</span></div>
+            <div class="card-body">
+              <h3>Lovebombing, INC</h3>
+              <p class="role">Founder, content</p>
+              <p class="desc">My community’s home on X, with our Spaces, clips and announcements.</p>
+              <div class="links"><a class="mbtn" href="https://x.com/LovebombingINC" target="_blank" rel="noopener">See it on X <i class="ext" aria-hidden="true"></i></a></div>
+            </div>
+          </article>
+          <article class="card" style="--tc: var(--hot)">
+            <div class="strip"><canvas class="film" data-seed="artists-way-live" aria-hidden="true"></canvas><span class="handle">Weekly livestream</span></div>
+            <div class="card-body">
+              <h3>The Artist’s Way livestreams</h3>
+              <p class="role">Co-host</p>
+              <p class="desc">Weekly livestreams on The Artist’s Way, co-hosted with my former colleague Kayla.</p>
+            </div>
+          </article>
+          <article class="card" style="--tc: var(--hot)">
+            <div class="strip"><canvas class="film" data-seed="sai-perps-reels" aria-hidden="true"></canvas><span class="handle">@larapurrcat</span></div>
+            <div class="card-body">
+              <h3>Learning perpetual trading with Sai</h3>
+              <p class="role">Creator, editor</p>
+              <p class="desc">A reel series about learning perpetual trading with Sai, posted on my Instagram.</p>
+              <div class="links">
+                <a class="mbtn" href="https://www.instagram.com/reel/DXgowb9iLwY/" target="_blank" rel="noopener">Watch a reel <i class="ext" aria-hidden="true"></i></a>
+                <a class="mbtn" href="https://www.instagram.com/larapurrcat/" target="_blank" rel="noopener">Instagram <i class="ext" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="sbar"><span>6 items</span><span>Track V2</span></div>
+    </section>
+
+    <div class="pair" id="lovebombing">
+      <section class="win sec" aria-labelledby="h-lb">
+        <div class="tbar" aria-hidden="true"><i class="box"></i><span>Lovebombing, INC</span><i class="box ghost"></i></div>
+        <div class="sec-body">
+          <header class="sec-head">
+            <h2 id="h-lb">The wholesome corner of crypto</h2>
+            <p class="sec-intro">Lovebombing, INC started as a group chat in December 2024 and became a meeting point for a diverse crowd in crypto, from traders to developers to key people in marketing.</p>
+          </header>
+          <ol class="history">
+            <li><i class="hrt" aria-hidden="true"></i><div><strong>The group chat</strong><p>It grew from the ground up, with light moderation and a lot of trust, and spread to Discord, Telegram and IRL meetups.</p></div></li>
+            <li><i class="hrt" aria-hidden="true"></i><div><strong>Ritual Spaces</strong><p>From winter 2025 I hosted Lovebombing’s full moon and new moon ritual Spaces on X.</p></div></li>
+            <li><i class="hrt" aria-hidden="true"></i><div><strong>Debate Spaces</strong><p>I co-hosted debate Spaces on technical blockchain topics, like the pros and cons of different chains.</p></div></li>
+            <li><i class="hrt" aria-hidden="true"></i><div><strong>The end of an era</strong><p>I kept hosting until Spaces stopped being the place to be.</p></div></li>
+          </ol>
+          <div class="links after"><a class="mbtn" href="https://x.com/LovebombingINC" target="_blank" rel="noopener">Lovebombing on X <i class="ext" aria-hidden="true"></i></a></div>
+        </div>
+        <div class="sbar"><span>Active Dec 2024 to May 2026</span><span>Track A2</span></div>
+      </section>
+
+      <section class="win win-app" aria-labelledby="h-app">
+        <div class="tbar" aria-hidden="true"><i class="box"></i><span>Lovebombing</span><i class="box ghost"></i></div>
+        <div class="app-body">
+          <h2 class="app-word" id="h-app">Lovebombing</h2>
+          <p class="app-blurb">I planned Lovebombing as an online mail art project, inspired by Ray Johnson. Each piece is a handmade digital love note: you pick a frame, collage images, clips and stickers, and build a beat on a small sequencer. The making is recorded as a timelapse. Each receiver adds a layer and sends it on. The chain is the work.</p>
+          <dl class="spec">
+            <div><dt>Built with:</dt><dd>Next.js, Fabric.js, ffmpeg in the browser, Supabase</dd></div>
+            <div><dt>Made with:</dt><dd>Claude Code and Figma</dd></div>
+            <div><dt>Also:</dt><dd>An on-chain edition on Stellar, with tips and Folded Letter, an encrypted exquisite-corpse drawing game.</dd></div>
+          </dl>
+          <a class="take" href="https://lovebombing.vercel.app/" target="_blank" rel="noopener"><img src="assets/take-me-there.webp" alt="Take me there: open the Lovebombing app" width="640" height="206"></a>
+          <a class="mbtn" href="https://github.com/purrcateth" target="_blank" rel="noopener">Code on GitHub <i class="ext" aria-hidden="true"></i></a>
+        </div>
+        <div class="sbar"><span>lovebombing.vercel.app</span><span>v1 live</span></div>
+      </section>
+    </div>
+
     <section class="win sec" id="writing" aria-labelledby="h-writing">
       <div class="tbar" aria-hidden="true"><i class="box"></i><span>Purrcat Purring</span><i class="box ghost"></i></div>
       <div class="sec-body">
@@ -744,151 +889,18 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
       <div class="sbar"><span>8 posts</span><span>Track T1</span></div>
     </section>
 
-    <section class="win sec" id="shorts" aria-labelledby="h-shorts">
-      <div class="tbar" aria-hidden="true"><i class="box"></i><span>Shorts</span><i class="box ghost"></i></div>
-      <div class="sec-body">
-        <header class="sec-head">
-          <h2 id="h-shorts">Shorts I cut and posted</h2>
-          <p class="sec-intro">Each feed has shorts I picked, edited and posted, with my own copy on every post.</p>
-        </header>
-        <div class="grid c2">
-          <article class="card" style="--tc: var(--hot)">
-            <div class="strip"><canvas class="film" data-seed="lovebombing-shorts" aria-hidden="true"></canvas><span class="handle">@LovebombingINC</span></div>
-            <div class="card-body">
-              <h3>Lovebombing INC</h3>
-              <p class="role">Clipper, editor, copy</p>
-              <p class="desc">Moments from my livestream interviews and X Spaces, cut for X and posted with the context that makes each one land.</p>
-              <div class="links"><a class="mbtn" href="https://x.com/LovebombingINC" target="_blank" rel="noopener">See the shorts on X <i class="ext" aria-hidden="true"></i></a></div>
-            </div>
-          </article>
-          <article class="card" style="--tc: var(--hot)">
-            <div class="strip"><canvas class="film" data-seed="internet-explorers" aria-hidden="true"></canvas><span class="handle">@intrntexplorers</span></div>
-            <div class="card-body">
-              <h3>Internet Explorers by Seed Club</h3>
-              <p class="role">Producer, clipper, copy</p>
-              <p class="desc">Clips from Seed Club’s livestream series, which I produced and which later became 11AM. I picked the moments, edited them and wrote the posts.</p>
-              <div class="links"><a class="mbtn" href="https://x.com/intrntexplorers" target="_blank" rel="noopener">See the shorts on X <i class="ext" aria-hidden="true"></i></a></div>
-            </div>
-          </article>
-          <article class="card" style="--tc: var(--hot)">
-            <div class="strip"><canvas class="film" data-seed="fluent-shorts" aria-hidden="true"></canvas><span class="handle">@fluent_eco</span></div>
-            <div class="card-body">
-              <h3>Fluent</h3>
-              <p class="role">Clipper, editor, copy</p>
-              <p class="desc">Shorts from Fluent streams and community sessions, made while I led ecosystem and creative partnerships there.</p>
-              <div class="links"><a class="mbtn" href="https://x.com/fluent_eco" target="_blank" rel="noopener">See the shorts on X <i class="ext" aria-hidden="true"></i></a></div>
-            </div>
-          </article>
-          <article class="card" style="--tc: var(--hot)">
-            <div class="strip"><canvas class="film" data-seed="instagram-reels" aria-hidden="true"></canvas><span class="handle">@larapurrcat</span></div>
-            <div class="card-body">
-              <h3>Instagram reels</h3>
-              <p class="role">Creator, editor</p>
-              <p class="desc">My own reels and visual experiments, edited in CapCut.</p>
-              <div class="links"><a class="mbtn" href="https://www.instagram.com/larapurrcat/" target="_blank" rel="noopener">See the reels <i class="ext" aria-hidden="true"></i></a></div>
-            </div>
-          </article>
-        </div>
-      </div>
-      <div class="sbar"><span>4 items</span><span>Track V2</span></div>
-    </section>
-
-    <section class="win sec" id="shows" aria-labelledby="h-shows">
-      <div class="tbar" aria-hidden="true"><i class="box"></i><span>Shows</span><i class="box ghost"></i></div>
-      <div class="sec-body">
-        <header class="sec-head">
-          <h2 id="h-shows">Shows and podcasts I host</h2>
-          <p class="sec-intro">Long-form I host, write and produce. This is where the clips come from.</p>
-        </header>
-        <div class="grid c2">
-          <article class="card" style="--tc: var(--steel)">
-            <div class="strip"><canvas class="film" data-seed="little-big-market" aria-hidden="true"></canvas><span class="handle">Interviews, 4 episodes</span></div>
-            <div class="card-body">
-              <h3>Little Big Market</h3>
-              <p class="role">Host, producer</p>
-              <p class="desc">An interview show about trust, community and brand building in crypto. Guests so far include Keewy founder Marianne, artist Grizz, Jessy Fries and Regan.</p>
-              <div class="links">
-                <a class="mbtn" href="https://open.spotify.com/show/1JHrky0schKJAeYH54oHgu" target="_blank" rel="noopener">Spotify <i class="ext" aria-hidden="true"></i></a>
-                <a class="mbtn" href="https://podcasts.apple.com/tr/podcast/little-big-market/id1884743011" target="_blank" rel="noopener">Apple Podcasts <i class="ext" aria-hidden="true"></i></a>
-                <a class="mbtn" href="https://www.youtube.com/@PurrcatLara/videos" target="_blank" rel="noopener">YouTube <i class="ext" aria-hidden="true"></i></a>
-              </div>
-            </div>
-          </article>
-          <article class="card" style="--tc: var(--steel)">
-            <div class="strip"><canvas class="film" data-seed="the-overflow" aria-hidden="true"></canvas><span class="handle">Solo, 4 episodes</span></div>
-            <div class="card-body">
-              <h3>The Overflow by Purrcat</h3>
-              <p class="role">Host, writer, editor</p>
-              <p class="desc">My solo video podcast about building, creating and trusting yourself, out whenever the cup overflows. The latest episode asks what work looks like once AI does most of the doing.</p>
-              <div class="links">
-                <a class="mbtn" href="https://open.spotify.com/show/6qE1unGS9MERSP3Iz1I9v0" target="_blank" rel="noopener">Spotify <i class="ext" aria-hidden="true"></i></a>
-                <a class="mbtn" href="https://podcasts.apple.com/tr/podcast/the-overflow-by-purrcat/id1882866590" target="_blank" rel="noopener">Apple Podcasts <i class="ext" aria-hidden="true"></i></a>
-                <a class="mbtn" href="https://www.youtube.com/@PurrcatLara/videos" target="_blank" rel="noopener">YouTube <i class="ext" aria-hidden="true"></i></a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-      <div class="sbar"><span>2 shows, 8 episodes</span><span>Tracks V1, A1</span></div>
-    </section>
-
-    <div class="pair" id="lovebombing">
-      <section class="win sec" aria-labelledby="h-lb">
-        <div class="tbar" aria-hidden="true"><i class="box"></i><span>Lovebombing INC</span><i class="box ghost"></i></div>
-        <div class="sec-body">
-          <header class="sec-head">
-            <h2 id="h-lb">A community, a show and an app</h2>
-            <p class="sec-intro">I built Lovebombing INC from a small group chat into a community across Discord, Telegram, X Spaces, livestreams and IRL events, and kept it active until May 2026.</p>
-          </header>
-          <ol class="history">
-            <li><i class="hrt" aria-hidden="true"></i><div><strong>The group chat</strong><p>It started small and grew from the ground up, with light moderation and a lot of trust.</p></div></li>
-            <li><i class="hrt" aria-hidden="true"></i><div><strong>X Spaces</strong><p>While I was working at Fluent, I started hosting X Spaces on markets, culture and community, plus full moon and equinox ritual Spaces.</p></div></li>
-            <li><i class="hrt" aria-hidden="true"></i><div><strong>The show</strong><p>The Spaces grew into a weekly livestream interview show, simulcast to X, YouTube, Twitch and Instagram. I kept both going after I left Fluent, until April 2026.</p></div></li>
-            <li><i class="hrt" aria-hidden="true"></i><div><strong>The app</strong><p>Then I started building Lovebombing, an app for handmade digital love notes.</p></div></li>
-          </ol>
-          <div class="links after"><a class="mbtn" href="https://x.com/LovebombingINC" target="_blank" rel="noopener">Lovebombing on X <i class="ext" aria-hidden="true"></i></a></div>
-        </div>
-        <div class="sbar"><span>Community active until May 2026</span><span>Track A2</span></div>
-      </section>
-
-      <section class="win win-app" aria-labelledby="h-app">
-        <div class="tbar" aria-hidden="true"><i class="box"></i><span>Lovebombing</span><i class="box ghost"></i></div>
-        <div class="app-body">
-          <h2 class="app-word" id="h-app">Lovebombing</h2>
-          <p class="app-blurb">Handmade digital love notes, in the lineage of Ray Johnson’s mail art. You pick a frame, collage images, clips and stickers, and build a beat on a small sequencer. The making is recorded as a timelapse. Each receiver adds a layer and sends it on. The chain is the work.</p>
-          <dl class="spec">
-            <div><dt>Built with:</dt><dd>Next.js, Fabric.js, ffmpeg in the browser, Supabase</dd></div>
-            <div><dt>Made with:</dt><dd>Claude Code and Figma</dd></div>
-            <div><dt>Also:</dt><dd>An on-chain edition on Stellar, with tips and Folded Letter, an encrypted exquisite-corpse drawing game.</dd></div>
-          </dl>
-          <a class="take" href="https://lovebombing.vercel.app/" target="_blank" rel="noopener"><img src="assets/take-me-there.webp" alt="Take me there: open the Lovebombing app" width="640" height="206"></a>
-          <a class="mbtn" href="https://github.com/purrcateth" target="_blank" rel="noopener">Code on GitHub <i class="ext" aria-hidden="true"></i></a>
-        </div>
-        <div class="sbar"><span>lovebombing.vercel.app</span><span>v1 live</span></div>
-      </section>
-    </div>
-
     <section class="win sec" id="method" aria-labelledby="h-method">
       <div class="tbar" aria-hidden="true"><i class="box"></i><span>Markers</span><i class="box ghost"></i></div>
       <div class="sec-body">
-        <div class="method">
-          <div class="method-intro">
-            <h2 id="h-method">How I work</h2>
-            <p class="sec-intro">Good content starts with paying attention. I watch what people react to, then build the post, the clip or the room around it.</p>
-            <div class="kit" aria-label="Tools I use">
+        <div class="method-intro">
+          <h2 id="h-method">How I work</h2>
+          <p class="sec-intro">Good content starts with paying attention. I watch what people react to, then build the post, the clip or the room around it.</p>
+          <div class="kit" aria-label="Tools I use">
               <span class="chip">OBS</span><span class="chip">Restream</span><span class="chip">CapCut</span><span class="chip">Descript</span><span class="chip">Canva</span><span class="chip">Adobe Firefly</span><span class="chip">Figma</span><span class="chip">Claude Code</span><span class="chip">Sony ZV-E10</span><span class="chip">DJI Osmo Pocket 3</span><span class="chip">Elgato Cam Link 4K</span>
             </div>
-          </div>
-          <ol class="steps">
-            <li><div class="n"><i class="hrt" aria-hidden="true"></i>1</div><div><strong>Live on the timeline</strong><p>I follow conversations as they happen and notice what people actually care about.</p></div></li>
-            <li><div class="n"><i class="hrt" aria-hidden="true"></i>2</div><div><strong>Lead with the idea</strong><p>Every post, clip and thread opens on the thing that matters, with no warm-up in front.</p></div></li>
-            <li><div class="n"><i class="hrt" aria-hidden="true"></i>3</div><div><strong>Write like a person</strong><p>Copy that sounds like someone on the timeline, not like a brand account.</p></div></li>
-            <li><div class="n"><i class="hrt" aria-hidden="true"></i>4</div><div><strong>Fit each platform</strong><p>X, Reels, YouTube and Spotify each get their own cut, format and caption.</p></div></li>
-            <li><div class="n"><i class="hrt" aria-hidden="true"></i>5</div><div><strong>Build the room</strong><p>Spaces, group chats and IRL events turn an audience into regulars.</p></div></li>
-          </ol>
         </div>
       </div>
-      <div class="sbar"><span>5 markers</span><span>Ruler</span></div>
+      <div class="sbar"><span>11 tools</span><span>Ruler</span></div>
     </section>
 
     <section class="win sec" id="offline" aria-labelledby="h-off">
@@ -902,7 +914,6 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
             <p class="desc">Sponsorships and side events at Token2049, Devcon, Devconnect, Consensus, EthCC, ETH Denver and Solana Breakpoint since 2022, including a prediction markets workshop in Argentina before Devconnect.</p>
           </div>
         </div>
-        <p class="also">Also: video edits, animations and social kits for Dora.</p>
       </div>
       <div class="sbar"><span>Since 2022</span><span>Track V1</span></div>
     </section>

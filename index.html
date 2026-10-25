@@ -267,10 +267,9 @@ img { max-width: 100%; }
 
 /* Hero */
 .hero { padding-block: clamp(30px, 5vw, 60px) 0; }
-.hero-grid { display: grid; gap: 28px; align-items: start; }
+.hero-grid { display: grid; gap: 32px; align-items: start; }
 @media (min-width: 900px) {
-  .hero-grid { grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 32px; }
-  .win-info { margin-top: 76px; }
+  .hero-grid { grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); align-items: stretch; }
 }
 .hero-body {
   position: relative;
@@ -520,9 +519,10 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
 /* Lovebombing pair */
 .pair { display: grid; gap: clamp(36px, 6vw, 56px); align-items: start; margin-top: clamp(36px, 6vw, 56px); }
 .pair > .sec { margin-top: 0; }
+.pair > .win { display: flex; flex-direction: column; }
+.pair > .win > .sec-body, .pair > .win > .app-body { flex: 1 1 auto; }
 @media (min-width: 920px) {
-  .pair { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; }
-  .pair > .win-app { margin-top: 64px; }
+  .pair { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; align-items: stretch; }
 }
 .history, .steps { list-style: none; margin: 0; padding: 0; }
 .history li, .steps li {
@@ -544,6 +544,7 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 16px;
   padding: clamp(28px, 5vw, 40px) clamp(16px, 4vw, 30px) 28px;
   text-align: center;
@@ -583,7 +584,7 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
 /* Off the timeline */
 .off { display: grid; gap: 18px; }
 @media (min-width: 760px) { .off { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.off.one { grid-template-columns: minmax(0, 1fr); max-width: 760px; }
+.off.one { grid-template-columns: minmax(0, 1fr); }
 .off > div { display: grid; gap: 8px; align-content: start; min-width: 0; padding: 16px; background: var(--paper); border: 1px solid var(--ink); box-shadow: 2px 2px 0 var(--shade-soft); }
 .off h3 { margin: 0; font-family: var(--font-serif); font-size: 24px; line-height: 1.15; color: var(--navy); }
 .off .links { margin-top: 2px; padding-top: 0; }
@@ -600,7 +601,8 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
 .foot span, .foot a { padding: 3px 8px; background: var(--paper); border: 1px solid var(--ink); text-decoration: none; }
 
 /* AI Arcade mini game */
-.game { display: grid; gap: 10px; padding: 12px 12px 14px; }
+.win-game { display: flex; flex-direction: column; }
+.game { flex: 1 1 auto; display: grid; grid-template-rows: auto 1fr; gap: 10px; padding: 12px 12px 14px; }
 .hud { display: flex; align-items: center; gap: 8px; font-family: var(--font-pixel); font-size: 19px; line-height: 1; font-variant-numeric: tabular-nums; }
 .hud-label { font-family: var(--font-chrome); font-size: 14px; white-space: nowrap; }
 .meter { position: relative; flex: 1; max-width: 170px; height: 14px; background: var(--paper); border: 1px solid var(--ink); overflow: hidden; }
@@ -619,7 +621,7 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
 .lives { margin-left: auto; display: inline-flex; gap: 3px; }
 .lives i { display: block; width: 15px; height: 13px; background: var(--heart) center / contain no-repeat; }
 .lives i.lost { opacity: 0.2; }
-.stage { position: relative; height: 300px; background: var(--paper); border: 1px solid var(--ink); box-shadow: inset 1px 1px 0 var(--mac-dark); overflow: hidden; }
+.stage { position: relative; display: flex; flex-direction: column; min-height: 300px; background: var(--paper); border: 1px solid var(--ink); box-shadow: inset 1px 1px 0 var(--mac-dark); overflow: hidden; container-type: inline-size; }
 #game { position: absolute; inset: 0; display: block; width: 100%; height: 100%; image-rendering: pixelated; outline: none; }
 .stage.playing #game { touch-action: none; }
 .screen {
@@ -636,20 +638,22 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
   background: var(--paper);
   text-align: center;
 }
+/* The start screen sits in the flow so the stage is always tall enough for it; the cat waits below it. */
+.screen-in { position: relative; inset: auto; flex: 1 1 auto; overflow: visible; background: transparent; padding: 18px 14px 66px; }
+.screen-in.off { visibility: hidden; }
 .game-h { margin: 0; font-family: var(--font-serif); font-size: 29px; line-height: 1.05; color: var(--navy); text-shadow: -2px 3px 6px var(--shade-faint); }
 .game-sub { margin: 0; max-width: 34ch; font-family: var(--font-prose); font-size: 15px; line-height: 1.5; color: var(--prose); text-wrap: balance; }
-.legend { list-style: none; margin: 2px 0; padding: 0; width: 100%; max-width: 360px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 12px; text-align: left; }
+.legend { list-style: none; margin: 2px 0; padding: 0; width: 100%; max-width: 250px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px 12px; text-align: left; }
+@container (min-width: 430px) { .legend { max-width: 380px; grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .legend li { display: flex; align-items: center; gap: 8px; min-width: 0; font-family: var(--font-pixel); font-size: 17px; line-height: 1.1; }
 .ico { flex: none; width: 24px; height: 24px; image-rendering: pixelated; }
 .screen .actions { margin-top: 2px; }
-@media (max-width: 560px) { .stage { height: 340px; } }
-@media (max-width: 350px) { .legend { grid-template-columns: minmax(0, 1fr); } .stage { height: 430px; } }
 
 /* Lovebombing, live on a pink laptop */
 .take-note { margin: -6px 0 0; font-family: var(--font-chrome); font-size: 13px; color: var(--line); }
 .closebtn { padding: 0; appearance: none; -webkit-appearance: none; }
 .closebtn:hover, .closebtn:focus-visible { background: var(--ink); }
-.try { display: grid; justify-items: center; gap: clamp(14px, 2.4vw, 22px); margin-top: clamp(44px, 7vw, 76px); }
+.try { display: grid; justify-items: center; gap: clamp(14px, 2.4vw, 22px); margin-top: clamp(36px, 6vw, 56px); }
 .try-tag {
   display: inline-flex;
   align-items: center;
@@ -674,10 +678,11 @@ a.frow:hover span, a.frow:focus-visible span { color: var(--paper); }
   --shell-lo: #EC9BCB;
   --shell-edge: #5A2148;
   --glass: #2A1832;
+  --lap-w: min(calc(100vw - 2 * clamp(16px, 4vw, 40px)), 1300px, max(600px, calc(((100vh - 64px - var(--bz) - 2 * var(--fr) - var(--chin)) * 4 / 3 + 2 * (var(--bz) + var(--fr)) + 4px) * 1.08)));
   position: relative;
-  justify-self: center;
-  width: min(calc(100vw - 2 * clamp(16px, 4vw, 40px)), 1300px, max(600px, calc(((100vh - 64px - var(--bz) - 2 * var(--fr) - var(--chin)) * 4 / 3 + 2 * (var(--bz) + var(--fr)) + 4px) * 1.08)));
-  margin: 0;
+  justify-self: start;
+  width: var(--lap-w);
+  margin: 0 calc((100% - var(--lap-w)) / 2);
 }
 .lt-lid {
   position: relative;
@@ -863,7 +868,7 @@ html.lt-lock { overflow: hidden; }
           </div>
           <div class="stage" id="stage">
             <canvas id="game" tabindex="0" aria-label="Mini game: move Purrcat to catch the things I have done and dodge the spam bots"></canvas>
-            <div class="screen" id="screen-start">
+            <div class="screen screen-in" id="screen-start">
               <h2 class="game-h" id="h-game">Load my AI arc</h2>
               <p class="game-sub">Catch the things I’ve done. Dodge the spam bots.</p>
               <ul class="legend">
@@ -1461,7 +1466,7 @@ html.lt-lock { overflow: hidden; }
       const img = IMG[type.k];
       const w = img.width * ICON_S, h = img.height * ICON_S;
       const diff = Math.min(1, st.t / 45);
-      st.items.push({ type, w, h, x: 6 + Math.random() * Math.max(1, W - w - 12), y: -h, v: 70 + 80 * diff + Math.random() * 35 });
+      st.items.push({ type, w, h, x: 6 + Math.random() * Math.max(1, W - w - 12), y: -h, v: (70 + 80 * diff + Math.random() * 35) * Math.max(1, H / 300) });
       st.spawn = 0.95 - 0.45 * diff + Math.random() * 0.25;
     }
     function step(dt) {
@@ -1498,7 +1503,7 @@ html.lt-lock { overflow: hidden; }
       ctx.fillRect(0, 0, W, H);
       ctx.fillStyle = PAL.g;
       for (let x = 0; x < W; x += 4) ctx.fillRect(x, H - 7, 2, 1);
-      if (!st) return;
+      if (!st) { ctx.drawImage(IMG.cat, Math.round((W - catW) / 2), H - 8 - catH, catW, catH); return; }
       st.items.forEach((it) => ctx.drawImage(IMG[it.type.k], Math.round(it.x), Math.round(it.y), it.w, it.h));
       const cy = H - 8 - catH;
       if (!(st.flash > 0 && Math.floor(st.flash * 12) % 2)) ctx.drawImage(IMG.cat, Math.round(st.x), cy, catW, catH);
@@ -1531,7 +1536,7 @@ html.lt-lock { overflow: hidden; }
       st = { x: Math.max(0, (W - catW) / 2), tx: null, items: [], fx: [], pct: 0, lives: 3, t: 0, spawn: 0.4, caught: 0, flash: 0, bag: [], left: false, right: false, running: true };
       hud();
       say('Arrow keys or drag to move');
-      startScr.hidden = true;
+      startScr.classList.add('off');
       endScr.hidden = true;
       stage.classList.add('playing');
       try { cv.focus({ preventScroll: true }); } catch (e) { /* focus is optional */ }
